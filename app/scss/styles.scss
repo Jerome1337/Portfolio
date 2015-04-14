@@ -1,0 +1,23 @@
+$grey: #26323a;
+$lightgrey: #26323a;
+$darkgreen: #027333;
+$green: #03a64a;
+$lightgreen: #2ecc71;
+
+.home{
+	background: $grey;
+
+	#particules{
+		border: 5px solid $darkgreen;
+	}
+}
+
+.bio{
+	background: $lightgrey;
+}
+
+footer{
+	height: 40px;
+	background: $grey;
+	color: white;
+}
