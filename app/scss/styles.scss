@@ -4,8 +4,26 @@ $darkgreen: #027333;
 $green: #03a64a;
 $lightgreen: #2ecc71;
 
+@font-face {
+    font-family:'portfolio';
+    src:url('../font/portfolio.eot');
+    src:url('../font/portfolio.eot?#iefix') format('embedded-opentype'),
+    url('../font/portfolio.woff') format('woff'),
+    url('../font/portfolio.ttf') format('truetype'),
+    url('../font/portfolio.svg#portfolio') format('svg');
+    font-weight:normal;
+    font-style:normal;
+    font-family:'Montserrat-Light';
+    src: url('../font/Montserrat-Light.otf') format('opentype');
+    font-weight:light;
+    font-style:light;
+}
+
 .nav{
 	background: $grey;
+	.navBar{
+		background: $grey;
+	}
 }
 
 .home{
@@ -24,4 +42,32 @@ footer{
 	height: 40px;
 	background: $grey;
 	color: white;
+	.fbLink, .twitterLink, .gitLink, .linkedLink, .viadeoLink{
+
+	}
+	.fbLink{
+		&:before{
+			content:'\e000';
+		}
+	}
+	.twitterLink{
+		&:before{
+			content:'\e001';
+		}
+	}
+	.gitLink{
+		&:before{
+			content:'\e002';
+		}
+	}
+	.linkedLink{
+		&:before{
+			content:'\e003';
+		}
+	}
+	.viadeoLink{
+		&:before{
+			content:'\e004';
+		}
+	}
 }
