@@ -1,5 +1,12 @@
 $(document).foundation();
 
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-48200179-1', 'auto');
+        ga('send', 'pageview');
+
 // RequestAnimFrame: a browser API for getting smooth animations
 window.requestAnimFrame = (function(){
   return  window.requestAnimationFrame       || 
@@ -17,7 +24,7 @@ var particules = document.getElementById("particules");
 var ctx = particules.getContext("2d");
 
 // Set the particules width and height to occupy full window
-var W = window.innerWidth, H = window.innerHeight;
+var W = window.innerWidth, H = window.innerHeight - 25;
 particules.width = W;
 particules.height = H;
 
@@ -136,6 +143,15 @@ function handleMouseDown(e){
       mouseX=parseInt(e.clientX-offsetX);
       mouseY=parseInt(e.clientY-offsetY);
 
+        Particle.draw = function() {
+        ctx.fillStyle = "rgb(46,204,113)";
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+        
+        ctx.fill();
+        }
     }
 
-$("#canvas").mousedown(function(e){handleMouseDown(e);});
+$("#particules").mousedown(function(e){
+    handleMouseDown(e);
+});

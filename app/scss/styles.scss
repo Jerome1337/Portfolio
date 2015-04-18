@@ -1,4 +1,4 @@
-$grey: #26323a;
+$grey: #1E272E;
 $lightgrey: #26323a;
 $darkgreen: #027333;
 $green: #03a64a;
@@ -19,31 +19,42 @@ $lightgreen: #2ecc71;
     font-style:light;
 }
 
+body {
+	background: $grey;
+}
+
 .nav{
 	background: $grey;
-	.navBar{
+	header{
 		background: $grey;
+		height: 60px;
 	}
 }
 
 .home{
-	background: $grey;
+	background: $lightgrey;
 
 	#particules{
-		border: 5px solid $darkgreen;
+		width: 100% !important;
+		height: 100%!important;
+		z-index: -100;
 	}
 }
 
 .bio{
-	background: $lightgrey;
+	background: $grey;
 }
 
 footer{
-	height: 40px;
-	background: $grey;
+	height: 50px !important;
+	background: $lightgrey;
 	color: white;
-	.fbLink, .twitterLink, .gitLink, .linkedLink, .viadeoLink{
-
+	.fbLink:before, 
+	.twitterLink:before, 
+	.gitLink:before, 
+	.linkedLink:before, 
+	.viadeoLink:before{
+		font-family:  'portfolio';
 	}
 	.fbLink{
 		&:before{
