@@ -1,7 +1,7 @@
 @font-face {
-  font-family: 'portfolio';
-  src: url('../font/portfolio.eot');
-  src: url('../font/portfolio.eot?#iefix') format('embedded-opentype'), url('../font/portfolio.woff') format('woff'), url('../font/portfolio.ttf') format('truetype'), url('../font/portfolio.svg#portfolio') format('svg');
+  font-family: "portfolio";
+  src: url("fonts/portfolio.eot");
+  src: url("fonts/portfolio.eot?#iefix") format("embedded-opentype"), url("fonts/portfolio.woff") format("woff"), url("fonts/portfolio.ttf") format("truetype"), url("fonts/portfolio.svg#portfolio") format("svg");
   font-weight: normal;
   font-style: normal;
   font-family: 'Montserrat-Light';
@@ -12,35 +12,66 @@
 body {
   background: #1E272E; }
 
-.nav {
-  background: #1E272E; }
-  .nav header {
-    background: #1E272E;
-    height: 60px; }
+.nav header {
+  background: #1E272E;
+  padding: 15px 0; }
+  .nav header .navBar {
+    background: #1E272E; }
+    .nav header .navBar .titleArea {
+      background: #1E272E !important; }
+    .nav header .navBar .right li a {
+      background: #1E272E;
+      font-font-size: 1.2em;
+      font-family: Montserrat-Light, Helvetica, sans-serif;
+      color: #fff; }
+      .nav header .navBar .right li a:hover {
+        border-bottom: 2px solid #03a64a; }
+      .nav header .navBar .right li a:hover {
+        background: #1E272E; }
 
 .home {
-  background: #26323a; }
+  padding: 20px 0;
+  background: #26323a;
+  border-top: 2px solid #03a64a;
+  text-align: center; }
   .home #particules {
     width: 100% !important;
     height: 100% !important;
     z-index: -100; }
 
 .bio {
-  background: #1E272E; }
+  padding: 20px 0;
+  background: #1E272E;
+  color: #fff; }
+  .bio .skills ul {
+    list-style: none;
+    text-align: center;
+    family: Montserrat-Light, Helvetica, sans-serif; }
+
+.projects {
+  padding: 20px 0;
+  background: #26323a; }
 
 footer {
-  height: 50px !important;
   background: #26323a;
-  color: white; }
-  footer .fbLink:before, footer .twitterLink:before, footer .gitLink:before, footer .linkedLink:before, footer .viadeoLink:before {
-    font-family: 'portfolio'; }
-  footer .fbLink:before {
+  padding: 20px 0; }
+  footer .row .communityBar .fbLink, footer .row .communityBar .twitterLink, footer .row .communityBar .gitLink, footer .row .communityBar .linkedLink, footer .row .communityBar .viadeoLink {
+    font-font-size: 1.2em;
+    font-family: Montserrat-Light, Helvetica, sans-serif;
+    color: #fff; }
+    footer .row .communityBar .fbLink:hover, footer .row .communityBar .twitterLink:hover, footer .row .communityBar .gitLink:hover, footer .row .communityBar .linkedLink:hover, footer .row .communityBar .viadeoLink:hover {
+      color: #999999;
+      transition: ease-in-out all .5s; }
+    footer .row .communityBar .fbLink:before, footer .row .communityBar .twitterLink:before, footer .row .communityBar .gitLink:before, footer .row .communityBar .linkedLink:before, footer .row .communityBar .viadeoLink:before {
+      font-family: portfolio;
+      margin-right: 5px; }
+  footer .row .communityBar .fbLink:before {
     content: '\e000'; }
-  footer .twitterLink:before {
+  footer .row .communityBar .twitterLink:before {
     content: '\e001'; }
-  footer .gitLink:before {
+  footer .row .communityBar .gitLink:before {
     content: '\e002'; }
-  footer .linkedLink:before {
+  footer .row .communityBar .linkedLink:before {
     content: '\e003'; }
-  footer .viadeoLink:before {
+  footer .row .communityBar .viadeoLink:before {
     content: '\e004'; }

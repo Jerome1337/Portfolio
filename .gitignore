@@ -1,5 +1,6 @@
 ._*
 .DS_Store
 .vagrant
+.tmp
 
 node_modules

@@ -7,151 +7,168 @@ $(document).foundation();
         ga('create', 'UA-48200179-1', 'auto');
         ga('send', 'pageview');
 
-// RequestAnimFrame: a browser API for getting smooth animations
-window.requestAnimFrame = (function(){
-  return  window.requestAnimationFrame       || 
-          window.webkitRequestAnimationFrame || 
-          window.mozRequestAnimationFrame    || 
-          window.oRequestAnimationFrame      || 
-          window.msRequestAnimationFrame     ||  
-          function( callback ){
-            window.setTimeout(callback, 1000 / 60);
-          };
-})();
 
-var particules = document.getElementById("particules");
+$(document).ready(function(){
 
-var ctx = particules.getContext("2d");
+    // RequestAnimFrame: a browser API for getting smooth animations
+    window.requestAnimFrame = (function(){
+      return  window.requestAnimationFrame       || 
+              window.webkitRequestAnimationFrame || 
+              window.mozRequestAnimationFrame    || 
+              window.oRequestAnimationFrame      || 
+              window.msRequestAnimationFrame     ||  
+              function( callback ){
+                window.setTimeout(callback, 1000 / 60);
+              };
+    })();
 
-// Set the particules width and height to occupy full window
-var W = window.innerWidth, H = window.innerHeight - 25;
-particules.width = W;
-particules.height = H;
+    var particules = document.getElementById("particules");
 
-var particleCount = 150,
-    particles = [],
-    minDist = 150,
-    dist;
+    var ctx = particules.getContext("2d");
 
-function paintParticules() {
-   ctx.fillStyle = "rgba(38,50,58,1)";
-   ctx.fillRect(0,0,W,H);
-}
+    // Set the particules width and height to occupy full window
+    var W = window.innerWidth, H = window.innerHeight - 25;
+    particules.width = W;
+    particules.height = H;
 
-function Particle() {
-    this.x = Math.random() * W;
-    this.y = Math.random() * H;
-    
-    this.vx = -1 + Math.random() * 2.5;
-    this.vy = -1 + Math.random() * 2.5;
+    var particleCount = 150,
+        particles = [],
+        minDist = 150,
+        dist;
 
-    this.radius = Math.random() * 6;
-
-    this.draw = function() {
-        ctx.fillStyle = "rgb(3,166,74)";
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-        
-        ctx.fill();
+    function paintParticules() {
+       ctx.fillStyle = "rgba(38,50,58,1)";
+       ctx.fillRect(0,0,W,H);
     }
-}
 
-for(var i = 0; i < particleCount; i++) {
-    particles.push(new Particle());
-}
-
-function draw() {
-    
-    paintParticules();
-    
-    for (var i = 0; i < particles.length; i++) {
-        p = particles[i];
-        p.draw();
-    }
-    
-    update();
-}
-
-function update() {
-    
-    for (var i = 0; i < particles.length; i++) {
-        p = particles[i];
+    function Particle() {
+        this.x = Math.random() * W;
+        this.y = Math.random() * H;
         
-        // Velocity
-        p.x += p.vx;
-        p.y += p.vy
+        this.vx = -1 + Math.random() * 2.5;
+        this.vy = -1 + Math.random() * 2.5;
+
+        this.radius = Math.random() * 6;
+
+        this.draw = function() {
+            ctx.fillStyle = "rgb(3,166,74)";
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
             
-        // Wall
-        if(p.x + p.radius > W) 
-            p.x = p.radius;
-        
-        else if(p.x - p.radius < 0) {
-            p.x = W - p.radius;
+            ctx.fill();
         }
-        
-        if(p.y + p.radius > H) 
-            p.y = p.radius;
-        
-        else if(p.y - p.radius < 0) {
-            p.y = H - p.radius;
-        }
-        
-        // Attract particles
-        for(var j = i + 1; j < particles.length; j++) {
-            p2 = particles[j];
-            distance(p, p2);
-        }
-    
     }
-}
 
-function distance(p1, p2) {
-    var dist,
-        dx = p1.x - p2.x;
-        dy = p1.y - p2.y;
-    
-    dist = Math.sqrt(dx*dx + dy*dy);
+    for(var i = 0; i < particleCount; i++) {
+        particles.push(new Particle());
+    }
+
+    function draw() {
+        
+        paintParticules();
+        
+        for (var i = 0; i < particles.length; i++) {
+            p = particles[i];
+            p.draw();
+        }
+        
+        update();
+    }
+
+    function update() {
+        
+        for (var i = 0; i < particles.length; i++) {
+            p = particles[i];
             
-    if(dist <= minDist) {
+            // Velocity
+            p.x += p.vx;
+            p.y += p.vy
+                
+            // Wall
+            if(p.x + p.radius > W) 
+                p.x = p.radius;
+            
+            else if(p.x - p.radius < 0) {
+                p.x = W - p.radius;
+            }
+            
+            if(p.y + p.radius > H) 
+                p.y = p.radius;
+            
+            else if(p.y - p.radius < 0) {
+                p.y = H - p.radius;
+            }
+            
+            // Attract particles
+            for(var j = i + 1; j < particles.length; j++) {
+                p2 = particles[j];
+                distance(p, p2);
+            }
         
-        ctx.beginPath();
-        ctx.strokeStyle = "rgba(46,204,113,"+ (1.2-dist/minDist) +")";
-        ctx.moveTo(p1.x, p1.y);
-        ctx.lineTo(p2.x, p2.y);
-        ctx.stroke();
-        ctx.closePath();
-
-        var ax = dx/10000,
-            ay = dy/10000;
-        
-        p1.vx += ax;
-        p1.vy += ay;
-        
-        p2.vx -= ax;
-        p2.vy -= ay;
-    }
-}
-
-function animloop() {
-    draw();
-    requestAnimFrame(animloop);
-}
-
-animloop();
-
-function handleMouseDown(e){
-      mouseX=parseInt(e.clientX-offsetX);
-      mouseY=parseInt(e.clientY-offsetY);
-
-        Particle.draw = function() {
-        ctx.fillStyle = "rgb(46,204,113)";
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-        
-        ctx.fill();
         }
     }
 
-$("#particules").mousedown(function(e){
-    handleMouseDown(e);
+    function distance(p1, p2) {
+        var dist,
+            dx = p1.x - p2.x;
+            dy = p1.y - p2.y;
+        
+        dist = Math.sqrt(dx*dx + dy*dy);
+                
+        if(dist <= minDist) {
+            
+            ctx.beginPath();
+            ctx.strokeStyle = "rgba(46,204,113,"+ (1.2-dist/minDist) +")";
+            ctx.moveTo(p1.x, p1.y);
+            ctx.lineTo(p2.x, p2.y);
+            ctx.stroke();
+            ctx.closePath();
+
+            var ax = dx/10000,
+                ay = dy/10000;
+            
+            p1.vx += ax;
+            p1.vy += ay;
+            
+            p2.vx -= ax;
+            p2.vy -= ay;
+        }
+    }
+
+    function animloop() {
+        draw();
+        requestAnimFrame(animloop);
+    }
+
+    animloop();
+
+    function handleMouseDown(e){
+          mouseX=parseInt(e.clientX-offsetX);
+          mouseY=parseInt(e.clientY-offsetY);
+
+            Particle.draw = function() {
+            ctx.fillStyle = "rgb(46,204,113)";
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+            
+            ctx.fill();
+            }
+        }
+
+    $("#particules").mousedown(function(e){
+        handleMouseDown(e);
+    });
+
+    $('a[href^="#"]').on('click',function (e) {
+        e.preventDefault();
+
+        var target = this.hash;
+        var $target = $(target);
+
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top
+        }, 900, 'swing', function () {
+            window.location.hash = target;
+        });
+    });
 });
