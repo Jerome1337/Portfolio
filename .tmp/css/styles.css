@@ -1,24 +1,37 @@
 @font-face {
-  font-family: "portfolio";
-  src: url("fonts/portfolio.eot");
-  src: url("fonts/portfolio.eot?#iefix") format("embedded-opentype"), url("fonts/portfolio.woff") format("woff"), url("fonts/portfolio.ttf") format("truetype"), url("fonts/portfolio.svg#portfolio") format("svg");
+  font-family: 'portfolio';
+  src: url("../font/portfolio.eot");
+  src: url("../font/portfolio.eot?#iefix") format("embedded-opentype"), url("../font/portfolio.woff") format("woff"), url("../font/portfolio.ttf") format("truetype"), url("../font/portfolio.svg#portfolio") format("svg");
   font-weight: normal;
   font-style: normal;
-  font-family: 'Montserrat-Light';
+  font-family: 'MontserratLight';
   src: url('../font/Montserrat-Light.otf') format('opentype');
   font-weight: light;
   font-style: light;
-  font-family: 'Montserrat-Regular';
-  src: url('../font/Montserrat-Regular.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-  font-family: 'Montserrat-Bold';
+  font-family: 'Montserrat';
   src: url('../font/Montserrat-Bold.otf') format('opentype');
   font-weight: bold;
-  font-style: bold; }
+  font-style: bold;
+  font-family: 'ashbury';
+  src: url('../font/AshburyLig-webfont.eot');
+  src: url('../font/AshburyLig-webfont.eot?#iefix') format('embedded-opentype'), url('../font/AshburyLig-webfont.woff2') format('woff2'), url('../font/AshburyLig-webfont.woff') format('woff'), url('../font/AshburyLig-webfont.ttf') format('truetype'), url('../font/AshburyLig-webfont.svg#ashburylight') format('svg');
+  font-weight: normal;
+  font-style: normal; }
 
 body {
   background: #353E42; }
+
+.title {
+  color: #fff;
+  text-align: center;
+  font-size: 1.8em;
+  font-family: Montserrat, Helvetica, sans-serif;
+  letter-spacing: 5px; }
+
+.typingBar {
+  color: #03a64a;
+  font-weight: bold;
+  text-shadow: 0 0 8px #2ecc71; }
 
 .nav header {
   background: #353E42;
@@ -29,8 +42,8 @@ body {
       background: #353E42 !important; }
     .nav header .navBar .right li a {
       background: #353E42;
-      font-font-size: 1.2em;
-      font-family: Montserrat-Regular, Helvetica, sans-serif;
+      font-font-size: 1.6em;
+      font-family: MontserratLight, Helvetica, sans-serif;
       color: #fff;
       border-bottom: 2px solid #353E42;
       transition: border-bottom-color 300ms ease-out 0s; }
@@ -52,20 +65,46 @@ body {
   .home .homeContent .row div {
     position: relative;
     z-index: 2;
-    height: 600px; }
+    padding: 150px 0;
+    /* height: 600px; */ }
+    .home .homeContent .row div h2, .home .homeContent .row div h3 {
+      font-family: Montserrat, Helvetica, sans-serif;
+      color: #fff;
+      font-size: 2.5em; }
+    .home .homeContent .row div h2 {
+      margin-bottom: 25px; }
+    .home .homeContent .row div h3 {
+      font-size: 2em; }
 
 .bio {
   padding: 20px 0;
   background: #353E42;
-  color: #fff; }
-  .bio .skills ul {
-    list-style: none;
-    text-align: center;
-    family: Montserrat-Light, Helvetica, sans-serif; }
+  color: #fff;
+  position: relative; }
+  .bio .row div h3 {
+    font-size: 1.8em;
+    font-family: Montserrat, Helvetica, sans-serif;
+    color: #fff; }
 
 .projects {
   padding: 20px 0;
   background: #353E42; }
+
+.skillSection {
+  padding: 20px 0;
+  background: #353E42;
+  color: #fff;
+  position: relative; }
+  .skillSection .row div h3 {
+    font-size: 1.8em;
+    font-family: Montserrat, Helvetica, sans-serif;
+    color: #fff; }
+  .skillSection .row .skills ul {
+    list-style: none;
+    text-align: center;
+    font-family: ashbury, serif; }
+    .skillSection .row .skills ul .li {
+      padding: 5px 0; }
 
 .cv {
   padding: 20px 0;
@@ -76,7 +115,7 @@ footer {
   padding: 20px 0; }
   footer .row .communityBar .fbLink, footer .row .communityBar .twitterLink, footer .row .communityBar .gitLink, footer .row .communityBar .linkedLink, footer .row .communityBar .viadeoLink {
     font-font-size: 1.2em;
-    font-family: Montserrat-Light, Helvetica, sans-serif;
+    font-family: MontserratLight, Helvetica, sans-serif;
     color: #fff; }
     footer .row .communityBar .fbLink:hover, footer .row .communityBar .twitterLink:hover, footer .row .communityBar .gitLink:hover, footer .row .communityBar .linkedLink:hover, footer .row .communityBar .viadeoLink:hover {
       color: #999999;

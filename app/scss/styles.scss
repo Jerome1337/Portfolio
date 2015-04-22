@@ -1,26 +1,31 @@
-@charset "UTF-8";
+@charset 'UTF-8';
 
 @font-face {
-	font-family: "portfolio";
-	src:url("fonts/portfolio.eot");
-	src:url("fonts/portfolio.eot?#iefix") format("embedded-opentype"),
-	  url("fonts/portfolio.woff") format("woff"),
-	  url("fonts/portfolio.ttf") format("truetype"),
-	  url("fonts/portfolio.svg#portfolio") format("svg");
+	font-family: 'portfolio';
+	src:url("../font/portfolio.eot");
+	src:url("../font/portfolio.eot?#iefix") format("embedded-opentype"),
+		url("../font/portfolio.woff") format("woff"),
+		url("../font/portfolio.ttf") format("truetype"),
+		url("../font/portfolio.svg#portfolio") format("svg");
 	font-weight: normal;
 	font-style: normal;
-    font-family:'Montserrat-Light';
-    src: url('../font/Montserrat-Light.otf') format('opentype');
+    font-family:'MontserratLight';
+    src:url('../font/Montserrat-Light.otf') format('opentype');
     font-weight:light;
     font-style:light;
-    font-family:'Montserrat-Regular';
-    src: url('../font/Montserrat-Regular.otf') format('opentype');
-    font-weight:normal;
-    font-style:normal;
-    font-family:'Montserrat-Bold';
-    src: url('../font/Montserrat-Bold.otf') format('opentype');
+    font-family:'Montserrat';
+    src:url('../font/Montserrat-Bold.otf') format('opentype');
     font-weight:bold;
     font-style:bold;
+    font-family: 'ashbury';
+    src:url('../font/AshburyLig-webfont.eot');
+    src:url('../font/AshburyLig-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../font/AshburyLig-webfont.woff2') format('woff2'),
+        url('../font/AshburyLig-webfont.woff') format('woff'),
+        url('../font/AshburyLig-webfont.ttf') format('truetype'),
+        url('../font/AshburyLig-webfont.svg#ashburylight') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 $grey: #353E42;
@@ -31,15 +36,15 @@ $lightgreen: #2ecc71;
 $white: #fff;
 
 $PO: portfolio;
-$ML: Montserrat-Light, Helvetica, sans-serif;
-$MR: Montserrat-Regular, Helvetica, sans-serif;
-$MB: Montserrat-Bold, Helvetica, sans-serif;
+$ML: MontserratLight, Helvetica, sans-serif;
+$MB: Montserrat, Helvetica, sans-serif;
+$AS: ashbury, serif;
 
 
 @mixin nav-text {
   font: {
-    font-size: 1.2em;
-    family: $MR;
+    font-size: 1.6em;
+    family: $ML;
   }
   color: $white;
   border-bottom: 2px solid $grey;
@@ -65,6 +70,20 @@ $MB: Montserrat-Bold, Helvetica, sans-serif;
 
 body {
 	background: $grey;
+}
+
+.title{
+	color: $white;
+	text-align: center;
+	font-size: 1.8em;
+	font-family: $MB;
+	letter-spacing: 5px;
+}
+
+.typingBar{
+	color: $green;
+	font-weight: bold;
+	text-shadow: 0 0 8px $lightgreen;
 }
 
 .nav{
@@ -106,9 +125,19 @@ body {
 			div{
 				position: relative;
 				z-index: 2;
-				height: 600px;
-				h2{
+				padding: 150px 0;
+				/* height: 600px; */
+				h2,h3{
+					font-family: $MB;
+					color: $white;
+					font-size: 2.5em;
 
+				}
+				h2{
+					margin-bottom: 25px;
+				}
+				h3{
+					font-size: 2em;
 				}
 			}
 		}
@@ -119,11 +148,14 @@ body {
 	padding: 20px 0;
 	background: $grey;
 	color: $white;
-	.skills{
-		ul{
-			list-style: none;
-			text-align: center;
-			font-family: $ML;
+	position: relative;
+	.row{
+		div{
+			h3{
+				font-size: 1.8em;
+				font-family: $MB;
+				color: $white;
+			}
 		}
 	}
 }
@@ -133,6 +165,32 @@ body {
 	background: $grey;
 	.row{
 
+	}
+}
+
+.skillSection{
+	padding: 20px 0;
+	background: $grey;
+	color: $white;
+	position: relative;
+	.row{
+		div{
+			h3{
+				font-size: 1.8em;
+				font-family: $MB;
+				color: $white;
+			}
+		}
+		.skills{
+			ul{
+				list-style: none;
+				text-align: center;
+				font-family: $AS;
+				.li{
+					padding: 5px 0;
+				}
+			}
+		}
 	}
 }
 
