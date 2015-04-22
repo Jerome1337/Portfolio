@@ -1,10 +1,3 @@
-$grey: #1E272E;
-$lightgrey: #26323a;
-$darkgreen: #027333;
-$green: #03a64a;
-$lightgreen: #2ecc71;
-$white: #fff;
-
 @charset "UTF-8";
 
 @font-face {
@@ -20,24 +13,47 @@ $white: #fff;
     src: url('../font/Montserrat-Light.otf') format('opentype');
     font-weight:light;
     font-style:light;
+    font-family:'Montserrat-Regular';
+    src: url('../font/Montserrat-Regular.otf') format('opentype');
+    font-weight:normal;
+    font-style:normal;
+    font-family:'Montserrat-Bold';
+    src: url('../font/Montserrat-Bold.otf') format('opentype');
+    font-weight:bold;
+    font-style:bold;
 }
+
+$grey: #353E42;
+$lightgrey: #3C464A;
+$darkgreen: #027333;
+$green: #03a64a;
+$lightgreen: #2ecc71;
+$white: #fff;
+
+$PO: portfolio;
+$ML: Montserrat-Light, Helvetica, sans-serif;
+$MR: Montserrat-Regular, Helvetica, sans-serif;
+$MB: Montserrat-Bold, Helvetica, sans-serif;
 
 
 @mixin nav-text {
   font: {
     font-size: 1.2em;
-    family: Montserrat-Light, Helvetica, sans-serif;
+    family: $MR;
   }
   color: $white;
+  border-bottom: 2px solid $grey;
+  transition: border-bottom-color 300ms ease-out 0s;
   &:hover{
   	border-bottom: 2px solid $green;
+  	transition: border-bottom-color 300ms ease-out 0s;
   }
 }
 
 @mixin footer-text {
   font: {
     font-size: 1.2em;
-    family: Montserrat-Light, Helvetica, sans-serif;
+    family: $ML;
   }
   color: $white;
   &:hover{
@@ -76,14 +92,26 @@ body {
 }
 
 .home{
-	padding: 20px 0;
 	background: $lightgrey;
 	border-top: 2px solid $green;
 	text-align: center;
-	#particules{
-		width: 100% !important;
-		height: 100%!important;
-		z-index: -100;
+	.homeContent{
+		#particules{
+			width: 100% !important;
+			height: 85% !important;
+			position: absolute;
+			z-index: 0;
+		}
+		.row{
+			div{
+				position: relative;
+				z-index: 2;
+				height: 600px;
+				h2{
+
+				}
+			}
+		}
 	}
 }
 
@@ -95,12 +123,20 @@ body {
 		ul{
 			list-style: none;
 			text-align: center;
-			family: Montserrat-Light, Helvetica, sans-serif;
+			font-family: $ML;
 		}
 	}
 }
 
 .projects{
+	padding: 20px 0;
+	background: $grey;
+	.row{
+
+	}
+}
+
+.cv{
 	padding: 20px 0;
 	background: $lightgrey;
 	.row{
@@ -120,7 +156,7 @@ footer{
 			.viadeoLink{
       			@include footer-text;
 				&:before{
-					font-family: portfolio;
+					font-family: $PO;
 					margin-right: 5px;
 				}
 			}

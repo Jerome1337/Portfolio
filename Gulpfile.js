@@ -134,7 +134,7 @@ gulp.task('clean', del.bind(null, [
 /*
  * Watch and reload
  */
-gulp.task('serve', ['styles', 'script'], function() {
+gulp.task('serve', ['styles'], function() {
     browserSync({
         notify: false,
         // Run as an https by uncommenting 'https: true'
@@ -147,7 +147,7 @@ gulp.task('serve', ['styles', 'script'], function() {
     gulp.watch( appSrc + '/**/*.php', reload);
     gulp.watch( appSrc + '/**/*.html', reload);
     gulp.watch( appSrc + '/scss/**/*.scss', ['styles', reload]);
-    gulp.watch( appSrc + '/js/**/*.js', ['script', reload]);
+    // gulp.watch( appSrc + '/js/**/*.js', ['script', reload]);
     gulp.watch( appSrc + '/img/**/*', reload);
 });
 

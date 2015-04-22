@@ -7,41 +7,56 @@
   font-family: 'Montserrat-Light';
   src: url('../font/Montserrat-Light.otf') format('opentype');
   font-weight: light;
-  font-style: light; }
+  font-style: light;
+  font-family: 'Montserrat-Regular';
+  src: url('../font/Montserrat-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-family: 'Montserrat-Bold';
+  src: url('../font/Montserrat-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: bold; }
 
 body {
-  background: #1E272E; }
+  background: #353E42; }
 
 .nav header {
-  background: #1E272E;
+  background: #353E42;
   padding: 15px 0; }
   .nav header .navBar {
-    background: #1E272E; }
+    background: #353E42; }
     .nav header .navBar .titleArea {
-      background: #1E272E !important; }
+      background: #353E42 !important; }
     .nav header .navBar .right li a {
-      background: #1E272E;
+      background: #353E42;
       font-font-size: 1.2em;
-      font-family: Montserrat-Light, Helvetica, sans-serif;
-      color: #fff; }
+      font-family: Montserrat-Regular, Helvetica, sans-serif;
+      color: #fff;
+      border-bottom: 2px solid #353E42;
+      transition: border-bottom-color 300ms ease-out 0s; }
       .nav header .navBar .right li a:hover {
-        border-bottom: 2px solid #03a64a; }
+        border-bottom: 2px solid #03a64a;
+        transition: border-bottom-color 300ms ease-out 0s; }
       .nav header .navBar .right li a:hover {
-        background: #1E272E; }
+        background: #353E42; }
 
 .home {
-  padding: 20px 0;
-  background: #26323a;
+  background: #3C464A;
   border-top: 2px solid #03a64a;
   text-align: center; }
-  .home #particules {
+  .home .homeContent #particules {
     width: 100% !important;
-    height: 100% !important;
-    z-index: -100; }
+    height: 85% !important;
+    position: absolute;
+    z-index: 0; }
+  .home .homeContent .row div {
+    position: relative;
+    z-index: 2;
+    height: 600px; }
 
 .bio {
   padding: 20px 0;
-  background: #1E272E;
+  background: #353E42;
   color: #fff; }
   .bio .skills ul {
     list-style: none;
@@ -50,10 +65,14 @@ body {
 
 .projects {
   padding: 20px 0;
-  background: #26323a; }
+  background: #353E42; }
+
+.cv {
+  padding: 20px 0;
+  background: #3C464A; }
 
 footer {
-  background: #26323a;
+  background: #3C464A;
   padding: 20px 0; }
   footer .row .communityBar .fbLink, footer .row .communityBar .twitterLink, footer .row .communityBar .gitLink, footer .row .communityBar .linkedLink, footer .row .communityBar .viadeoLink {
     font-font-size: 1.2em;
