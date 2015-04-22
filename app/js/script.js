@@ -23,7 +23,7 @@ $(document).ready(function(){
     particules.width = W;
     particules.height = H;
 
-    var particleCount = 150,
+    var particleCount = 250,
         particles = [],
         minDist = 150,
         dist;
@@ -119,11 +119,11 @@ $(document).ready(function(){
             var ax = dx/10000,
                 ay = dy/10000;
             
-            p1.vx += ax;
-            p1.vy += ay;
+            p1.vx <= ax;
+            p1.vy <= ay;
             
-            p2.vx -= ax;
-            p2.vy -= ay;
+            p2.vx >= ax;
+            p2.vy >= ay;
         }
     }
 
@@ -151,16 +151,16 @@ $(document).ready(function(){
         handleMouseDown(e);
     });
 
-    $('a[href^="#"]').on('click',function (e) {
-        e.preventDefault();
+    // $('a[href^="#"]').on('click',function (e) {
+    //     e.preventDefault();
 
-        var target = this.hash;
-        var $target = $(target);
+    //     var target = this.hash;
+    //     var $target = $(target);
 
-        $('html, body').stop().animate({
-            'scrollTop': $target.offset().top
-        }, 900, 'swing', function () {
-            window.location.hash = target;
-        });
-    });
+    //     $('html, body').stop().animate({
+    //         'scrollTop': $target.offset().top
+    //     }, 900, 'swing', function () {
+    //         window.location.hash = target;
+    //     });
+    // });
 });

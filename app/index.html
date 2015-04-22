@@ -30,29 +30,7 @@
         <script src="js/vendor/modernizr.js"></script>
     </head>
     <body>
-        <section class="row nav">
-            <header class="larges-12 columns contain-to-grid sticky">
-                <nav class="top-bar navBar" data-topbar role="navigation" data-options="sticky_on: [medium,large]">
-                    <ul class="title-area titleArea">
-                            <li class="name">
-                                <a href="#home"><!-- <img src="img/favicons/favicon-32x32.png" alt="logo"> --></a>
-                            </li>
-                            <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
-                    </ul>
-                    <div class="top-bar-section">
-                        <ul class="right">
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#bio">Bio</a></li>
-                            <li><a href="#project">Projets</a></li>
-                            <li><a href="#skill">Compétences</a></li>
-                            <li><a href="#cv">CV</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
-                </nav>
-            </header>
-        </section>
-        <section class="home" id="home">
+        <section class="home">
             <div class="homeContent">
                 <canvas class="show-for-medium-up" id="particules"></canvas>
                 <section class="row">
@@ -63,36 +41,83 @@
                 </section>
             </div>
         </section>
-        <section class="bio" id="bio">
+        <section class="bio">
             <section class="row">
                 <div class="large-12 columns">
                     <h3>Bonjour, je m'appelle Jérôme, j'ai 20 ans. Je suis développeur web</h3>
                 </div>
             </section>
         </section>
-        <section class="projects" id="project">
+        <section class="projects">
             <section class="row">
                 <h3 class="large-12 columns title">PROJETS</h3>
+<!--                 <ul class="accordion" data-accordion>
+                    <li class="accordion-navigation large-4 medium-6 small-12 columns">
+                        <a href="#oldeal"><img src="img/favicons/favicon-32x32.png" alt=""></a>
+                        <div>
+                            <p>Oldeal</p>
+                            <p>Front-end</p>
+                        </div>
+                        <div id="oldeal" class="content projectModal large-12 columns">
+                            <h4 id="oldealTitle">OLDEAL</h4>
+                            <img src="img/oldeal.jpg" alt="OldealScreenShot">
+                            <p>À travers des propos volontairement violents et provoquants, l'objectif d'Oldeal est de faire réagir contre une attitude passive et trop souvent mercantile au regard du bien-être et du bien vieillir des personnes âgées. Cette campagne de communication à été réalisée dans le cadre d'un projet étudiant.</p>
+                            <ul>
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                                <li>PHP</li>
+                                <li>Javascript / jQuery</li>
+                                <li>Foundation 5</li>
+                            </ul>
+                            <a href="http://oldeal.com/">Visitez Oldeal.com</a>
+                            <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+                        </div>
+                    </li>
+                </ul> -->
                 <div>
                     <div class="large-4 medium-6 small-12 columns">
-                        <a href="#" data-reveal-id="oldealModal"><img src="" alt="">aaaaaaaa</a>
+                        <img src="img/favicons/favicon-32x32.png" alt="" data-reveal-id="oldealModal">
+                        <div>
+                            <p>Oldeal</p>
+                            <p>Front-end</p>
+                        </div>
                     </div>
                     <div class="large-4 medium-6 small-12 columns">
-                        <a href="#" data-reveal-id="shegueylandModal"><img src="" alt="">aaaaaaaa</a>
+                        <img src="img/favicons/favicon-32x32.png" alt="" data-reveal-id="shegueylandModal">
+                        <div>
+                            <p>ShegueyLand</p>
+                            <p>Front/Back-end</p>
+                        </div>
                     </div>
                     <div class="large-4 medium-6 small-12 columns">
-                        <a href="#" data-reveal-id="nastycodeModal"><img src="" alt="">aaaaaaaa</a>
+                        <img src="img/favicons/favicon-32x32.png" alt="" data-reveal-id="nastycodeModal">
+                        <div>
+                            <p>NastyCode</p>
+                            <p>Symfony 2 &amp; Back-end</p>
+                        </div>
                     </div>
                 </div>
                 <div>
                     <div class="large-4 medium-6 small-12 columns">
-                        <a href="#" data-reveal-id="lgavModal"><img src="" alt="">aaaaaaaa</a>
+                        <img src="img/favicons/favicon-32x32.png" alt="" data-reveal-id="lgavModal">
+                        <div>
+                            <p>Les Gourmets à Vélo</p>
+                            <p>Symfony 2 &amp; Back-end</p>
+                        </div>
                     </div>
                     <div class="large-4 medium-6 small-12 columns">
-                        <a href="#" data-reveal-id="ddcModal"><img src="" alt="">aaaaaaaa</a>
+                        <img src="img/favicons/favicon-32x32.png" alt="" data-reveal-id="ddcModal">
+                        <div>
+                            <p>Développement Durable Consult</p>
+                            <p>Design &amp; Front-end</p>
+                        </div>
                     </div>
                     <div class="large-4 medium-6 small-12 columns">
-                        <a href="#" data-reveal-id=""><img src="" alt="">aaaaaaaa</a>
+                        <img src="img/favicons/favicon-32x32.png" alt="" data-reveal-id="">
+                        <div>
+                        <p>Unknow</p>
+                        <p></p>
+                    </div>
                     </div>
                 </div>
 
@@ -182,78 +207,74 @@
                         <li>HTML5</li>
                         <li>CSS3</li>
                         <li>Javascript / jQuery</li>
-                        <li></li>
-                        <li></li>
                     </ul>
                     <a href="#"></a>
                     <a class="close-reveal-modal" aria-label="Close">&#215;</a>
                 </div>
             </section>
         </section>
-        <section class="skillSection" id="skill">
+        <section class="skillSection">
             <section class="row">
                 <div class="large-12 columns">
-                    <h3 class="title">COMPÉTENCES<span class="typingBar">_</span></h3>
+                    <h3 class="title">COMPÉTENCES</h3>
                 </div>
-                <div class="large-4 medium-4 small-12 columns skills">
+                <div class="large-3 medium-3 small-12 columns skills">
                     <ul>
                         <li><p>HTML</p></li>
-                        <li><p>Sass</p></li>
-                        <li><p>JavaScript</p></li>
+                        <li><p>CSS / Sass</p></li>
+                        <li><p>JavaScript / jQuery</p></li>
                     </ul>
                 </div>
-                <div class="large-4 medium-4 small-12 columns skills">
+                <div class="large-3 medium-3 small-12 columns skills">
                     <ul>
-                        <li><p>PHP</p></li>
-                        <li><p>SYMFONY2</p></li>
+                        <li><p>HTML</p></li>
+                        <li><p>Foundation 5</p></li>
                         <li><p>Gulp</p></li>
                     </ul>
                 </div>
-                <div class="large-4 medium-4 small-12 columns skills">
+                <div class="large-3 medium-3 small-12 columns skills">
                     <ul>
+                        <li><p>Symfony 2</p></li>
+                        <li><p>Twig</p></li>
                         <li><p>GIT</p></li>
+                    </ul>
+                </div>
+                <div class="large-3 medium-3 small-12 columns skills">
+                    <ul>
                         <li><p>Photoshop</p></li>
                         <li><p>Illustrator</p></li>
+                        <li><p>InDesign</p></li>
                     </ul>
                 </div>
             </section>
         </section>
-        <section class="cv" id="cv">
+        <section class="cv">
             <section class="row">
                 <div class="large-12 columns">
                     <h3 class="title">CV</h3>
+                </div>
+                <div class="small-2 small-centered columns">
                     <div>
                         <a href="" target="_blank">
                             <img src="" alt="Icon CV">
                         </a>
+                        <p>Affichez mon CV</p>
                     </div>
                 </div>
             </section>
         </section>
-        <!-- <section class="contact" id="contact">
-            <section class="row">
-                <div class="large-12 columns">
-                   <h4>Jérôme Pogeant</h4>
-                   <h5>p-jerome@hotmail.fr</h5>
-                   <h5>06.50.01.08.94</h5>
-                </div>
-            </section>
-            <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2624.2953097993977!2d2.715038!3d48.8716467!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e61b691bc70839%3A0xf48bc497138a4c7c!2s29+Rue+des+Roses%2C+77400+Lagny-sur-Marne!5e0!3m2!1sfr!2sfr!4v1429176526767" width="100%" height="400" frameborder="0" style="border:0"></iframe>
-            </div>
-        </section> -->
         <footer>
             <section class="row">
                 <div class="large-6 medium-6 small-12 columns contactBar">
                    <h4>Jérôme Pogeant</h4>
-                   <h5>p-jerome@hotmail.fr</h5>
-                   <h5>06.50.01.08.94</h5>
+                   <h5><a href="mailto:p-jerome@hotmail.fr">p-jerome@hotmail.fr</a></h5>
+                   <h5><a href="tel:065-001-0894">06.50.01.08.94</a></h5>
                 </div>
                 <div class="large-6 medium-6 small-12 columns communityBar">
                     <a href="https://www.facebook.com/jerome.pogeant" target="-blank" class="fbLink">Facebook</a>
                     <a href="https://twitter.com/jeromepogeant" target="-blank" class="twitterLink">Twitter</a>
                     <a href="https://github.com/Jerome1337/" target="-blank" class="gitLink">Github</a>
-                    <a href="https://www.linkedin.com/profile/view?id=207175036" target="-blank" class="linkedLink">linked In</a>
+                    <a href="https://www.linkedin.com/profile/view?id=207175036" target="-blank" class="linkedLink">LinkedIn</a>
                     <a href="http://www.viadeo.com/profile/00227pw04forqi2i/" target="-blank" class="viadeoLink">Viadeo</a>
                 </div>
             </section>

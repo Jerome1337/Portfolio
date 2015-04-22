@@ -40,29 +40,15 @@ $ML: MontserratLight, Helvetica, sans-serif;
 $MB: Montserrat, Helvetica, sans-serif;
 $AS: ashbury, serif;
 
-
-@mixin nav-text {
-  font: {
-    font-size: 1.6em;
-    family: $ML;
-  }
-  color: $white;
-  border-bottom: 2px solid $grey;
-  transition: border-bottom-color 300ms ease-out 0s;
-  &:hover{
-  	border-bottom: 2px solid $green;
-  	transition: border-bottom-color 300ms ease-out 0s;
-  }
-}
-
 @mixin footer-text {
   font: {
     font-size: 1.2em;
-    family: $ML;
+    family: $MB;
   }
-  color: $white;
+  text-transform: uppercase;
+  color: darken($white, 50%);
   &:hover{
-    color: darken($white, 40%);
+    color: $white;
     transition: ease-in-out all .5s;
   }
 }
@@ -78,50 +64,36 @@ body {
 	font-size: 1.8em;
 	font-family: $MB;
 	letter-spacing: 5px;
-}
-
-.typingBar{
-	color: $green;
-	font-weight: bold;
-	text-shadow: 0 0 8px $lightgreen;
-}
-
-.nav{
-	header{
-		background: $grey;
-		padding: 15px 0;
-		.navBar{
-			background: $grey;
-			.titleArea{
-				background: $grey !important;
-			}
-			.right{
-				li{
-					a{
-						background: $grey;
-						@include nav-text;
-						&:hover{
-							background: $grey;
-						}
-					}
-				}
-			}
-		}
+	margin-bottom: 60px;
+	&:after{
+		content: '_';
+		color: $green;
+		font-weight: bold;
+		text-shadow: 0 0 8px $lightgreen;
+	    animation: barOpacity 0.8s ease-in-out infinite;
 	}
+}
+
+@keyframes barOpacity {
+    0%{opacity: 0;}
+    50%{opacity: 1;}
+    100%{opacity: 0;}
 }
 
 .home{
 	background: $lightgrey;
-	border-top: 2px solid $green;
+	// border-top: 2px solid $green;
 	text-align: center;
+	min-height: 95%;
 	.homeContent{
 		#particules{
 			width: 100% !important;
-			height: 85% !important;
+			height: 95% !important;
 			position: absolute;
 			z-index: 0;
 		}
 		.row{
+			display: table;
 			div{
 				position: relative;
 				z-index: 2;
@@ -130,14 +102,14 @@ body {
 				h2,h3{
 					font-family: $MB;
 					color: $white;
-					font-size: 2.5em;
+					font-size: 3.5em;
 
 				}
 				h2{
 					margin-bottom: 25px;
 				}
 				h3{
-					font-size: 2em;
+					font-size: 2.5em;
 				}
 			}
 		}
@@ -145,7 +117,7 @@ body {
 }
 
 .bio{
-	padding: 20px 0;
+	padding: 100px 0;
 	background: $grey;
 	color: $white;
 	position: relative;
@@ -161,19 +133,20 @@ body {
 }
 
 .projects{
-	padding: 20px 0;
-	background: $grey;
+	padding: 100px 0;
+	background: $lightgrey;
+	position: relative;
 	.row{
 
 	}
 }
 
 .skillSection{
-	padding: 20px 0;
+	padding: 100px 0;
 	background: $grey;
 	color: $white;
-	position: relative;
 	.row{
+		vertical-align: middle;
 		div{
 			h3{
 				font-size: 1.8em;
@@ -186,8 +159,13 @@ body {
 				list-style: none;
 				text-align: center;
 				font-family: $AS;
-				.li{
+				li{
 					padding: 5px 0;
+					margin-bottom: 0;
+					p{
+						margin-bottom: 0;
+						color: darken($white, 30%);
+					}
 				}
 			}
 		}
@@ -195,7 +173,7 @@ body {
 }
 
 .cv{
-	padding: 20px 0;
+	padding: 100px 0;
 	background: $lightgrey;
 	.row{
 
@@ -203,16 +181,37 @@ body {
 }
 
 footer{
-	background: $lightgrey;
-	padding: 20px 0;
+	background: $grey;
+	padding: 40px 0;
 	.row{
+		display: table;
+		.contactBar{
+			h4,h5{
+				color: darken($white, 30%);
+				a{
+					color: darken($white, 30%);
+					&:hover{
+						color: $white;
+						transition: ease-in-out all .5s;
+					}
+				}
+			}
+			h4{
+				font-family: $MB;
+			}
+			h5{
+				font-family: $ML
+			}
+		}
 		.communityBar{
+			display: table-cell;
+			vertical-align: middle;
 			.fbLink, 
 			.twitterLink, 
 			.gitLink, 
 			.linkedLink, 
 			.viadeoLink{
-      			@include footer-text;
+				@include footer-text;
 				&:before{
 					font-family: $PO;
 					margin-right: 5px;
