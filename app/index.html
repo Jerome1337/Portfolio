@@ -51,47 +51,24 @@
         <section class="projects">
             <section class="row">
                 <h3 class="large-12 columns title">PROJETS</h3>
-<!--                 <ul class="accordion" data-accordion>
-                    <li class="accordion-navigation large-4 medium-6 small-12 columns">
-                        <a href="#oldeal"><img src="img/favicons/favicon-32x32.png" alt=""></a>
-                        <div>
-                            <p>Oldeal</p>
-                            <p>Front-end</p>
-                        </div>
-                        <div id="oldeal" class="content projectModal large-12 columns">
-                            <h4 id="oldealTitle">OLDEAL</h4>
-                            <img src="img/oldeal.jpg" alt="OldealScreenShot">
-                            <p>À travers des propos volontairement violents et provoquants, l'objectif d'Oldeal est de faire réagir contre une attitude passive et trop souvent mercantile au regard du bien-être et du bien vieillir des personnes âgées. Cette campagne de communication à été réalisée dans le cadre d'un projet étudiant.</p>
-                            <ul>
-                                <li>HTML5</li>
-                                <li>CSS3</li>
-                                <li>PHP</li>
-                                <li>Javascript / jQuery</li>
-                                <li>Foundation 5</li>
-                            </ul>
-                            <a href="http://oldeal.com/">Visitez Oldeal.com</a>
-                            <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-                        </div>
-                    </li>
-                </ul> -->
                 <div>
                     <div class="large-4 medium-6 small-12 columns">
-                        <img src="img/favicons/favicon-32x32.png" alt="" data-reveal-id="oldealModal">
-                        <div>
+                        <img src="img/favicons/favicon-32x32.png" alt="" data-reveal-id="oldealModal" class="projectThumb">
+                        <div class="thumbDesc">
                             <p>Oldeal</p>
                             <p>Front-end</p>
                         </div>
                     </div>
                     <div class="large-4 medium-6 small-12 columns">
-                        <img src="img/favicons/favicon-32x32.png" alt="" data-reveal-id="shegueylandModal">
-                        <div>
+                        <img src="img/favicons/favicon-32x32.png" alt="" data-reveal-id="shegueylandModal" class="projectThumb">
+                        <div class="thumbDesc">
                             <p>ShegueyLand</p>
-                            <p>Front/Back-end</p>
+                            <p>Front / Back-end</p>
                         </div>
                     </div>
                     <div class="large-4 medium-6 small-12 columns">
-                        <img src="img/favicons/favicon-32x32.png" alt="" data-reveal-id="nastycodeModal">
-                        <div>
+                        <img src="img/favicons/favicon-32x32.png" alt="" data-reveal-id="nastycodeModal" class="projectThumb">
+                        <div class="thumbDesc">
                             <p>NastyCode</p>
                             <p>Symfony 2 &amp; Back-end</p>
                         </div>
@@ -99,28 +76,27 @@
                 </div>
                 <div>
                     <div class="large-4 medium-6 small-12 columns">
-                        <img src="img/favicons/favicon-32x32.png" alt="" data-reveal-id="lgavModal">
-                        <div>
+                        <img src="img/favicons/favicon-32x32.png" alt="" data-reveal-id="lgavModal" class="projectThumb">
+                        <div class="thumbDesc">
                             <p>Les Gourmets à Vélo</p>
                             <p>Symfony 2 &amp; Back-end</p>
                         </div>
                     </div>
                     <div class="large-4 medium-6 small-12 columns">
-                        <img src="img/favicons/favicon-32x32.png" alt="" data-reveal-id="ddcModal">
-                        <div>
+                        <img src="img/favicons/favicon-32x32.png" alt="" data-reveal-id="ddcModal" class="projectThumb">
+                        <div class="thumbDesc">
                             <p>Développement Durable Consult</p>
                             <p>Design &amp; Front-end</p>
                         </div>
                     </div>
                     <div class="large-4 medium-6 small-12 columns">
-                        <img src="img/favicons/favicon-32x32.png" alt="" data-reveal-id="">
-                        <div>
+                        <img src="img/favicons/favicon-32x32.png" alt="" data-reveal-id="" class="projectThumb">
+                        <div class="thumbDesc">
                         <p>Unknow</p>
                         <p></p>
                     </div>
                     </div>
                 </div>
-
                 <!-- MODALS -->
                 <div id="oldealModal" class="reveal-modal projectModal" data-reveal aria-labelledby="oldealTitle" aria-hidden="true" role="dialog">
                     <h4 id="oldealTitle">OLDEAL</h4>
@@ -133,7 +109,7 @@
                         <li>Javascript / jQuery</li>
                         <li>Foundation 5</li>
                     </ul>
-                    <a href="http://oldeal.com/">Visitez Oldeal.com</a>
+                    <a href="http://oldeal.com/" class="button radius">Visitez Oldeal.com</a>
                     <a class="close-reveal-modal" aria-label="Close">&#215;</a>
                 </div>
 
@@ -147,7 +123,7 @@
                         <li>Javascript / jQuery</li>
                         <li>PHP</li>
                     </ul>
-                    <a href="http://sheguey.land/">Visitez Sheguey.land</a>
+                    <a href="http://sheguey.land/" class="button radius">Visitez Sheguey.land</a>
                     <a class="close-reveal-modal" aria-label="Close">&#215;</a>
                 </div>
 
@@ -163,7 +139,7 @@
                         <li>Symfony2</li>
                         <li>Foundation 5</li>
                     </ul>
-                    <a href="http://nastyco.de/">Visitez Nastyco.de</a>
+                    <a href="http://nastyco.de/" class="button radius">Visitez Nastyco.de</a>
                     <a class="close-reveal-modal" aria-label="Close">&#215;</a>
                 </div>
 
@@ -179,7 +155,7 @@
                         <li>Symfony2</li>
                         <li>Foundation 5</li>
                     </ul>
-                    <a href="#">Prochainement en ligne</a>
+                    <a href="#" class="button radius">Prochainement en ligne</a>
                     <a class="close-reveal-modal" aria-label="Close">&#215;</a>
                 </div>
 
@@ -195,7 +171,7 @@
                         <li>Symfony2</li>
                         <li>Foundation 5</li>
                     </ul>
-                    <a href="#">Prochainement en ligne</a>
+                    <a href="#" class="button radius">Prochainement en ligne</a>
                     <a class="close-reveal-modal" aria-label="Close">&#215;</a>
                 </div>
 
@@ -208,7 +184,7 @@
                         <li>CSS3</li>
                         <li>Javascript / jQuery</li>
                     </ul>
-                    <a href="#"></a>
+                    <a href="#" class="button radius"></a>
                     <a class="close-reveal-modal" aria-label="Close">&#215;</a>
                 </div>
             </section>
@@ -253,29 +229,26 @@
                 <div class="large-12 columns">
                     <h3 class="title">CV</h3>
                 </div>
-                <div class="small-2 small-centered columns">
+                <div class="small-2 small-centered columns cvButton">
                     <div>
-                        <a href="" target="_blank">
-                            <img src="" alt="Icon CV">
-                        </a>
-                        <p>Affichez mon CV</p>
+                        <a href="#" target="_blank"></a>
                     </div>
                 </div>
             </section>
         </section>
         <footer>
             <section class="row">
-                <div class="large-6 medium-6 small-12 columns contactBar">
+                <div class="large-5 medium-5 small-12 columns contactBar">
                    <h4>Jérôme Pogeant</h4>
                    <h5><a href="mailto:p-jerome@hotmail.fr">p-jerome@hotmail.fr</a></h5>
                    <h5><a href="tel:065-001-0894">06.50.01.08.94</a></h5>
                 </div>
-                <div class="large-6 medium-6 small-12 columns communityBar">
-                    <a href="https://www.facebook.com/jerome.pogeant" target="-blank" class="fbLink">Facebook</a>
-                    <a href="https://twitter.com/jeromepogeant" target="-blank" class="twitterLink">Twitter</a>
-                    <a href="https://github.com/Jerome1337/" target="-blank" class="gitLink">Github</a>
-                    <a href="https://www.linkedin.com/profile/view?id=207175036" target="-blank" class="linkedLink">LinkedIn</a>
-                    <a href="http://www.viadeo.com/profile/00227pw04forqi2i/" target="-blank" class="viadeoLink">Viadeo</a>
+                <div class="large-7 medium-7 small-12 columns communityBar">
+                    <a href="https://www.facebook.com/jerome.pogeant" target="_blank" class="fbLink">Facebook</a>
+                    <a href="https://twitter.com/jeromepogeant" target="_blank" class="twitterLink">Twitter</a>
+                    <a href="https://github.com/Jerome1337/" target="_blank" class="gitLink">Github</a>
+                    <a href="https://www.linkedin.com/profile/view?id=207175036" target="_blank" class="linkedLink">LinkedIn</a>
+                    <a href="http://www.viadeo.com/profile/00227pw04forqi2i/" target="_blank" class="viadeoLink">Viadeo</a>
                 </div>
             </section>
         </footer>

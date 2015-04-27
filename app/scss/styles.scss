@@ -42,9 +42,10 @@ $AS: ashbury, serif;
 
 @mixin footer-text {
   font: {
-    font-size: 1.2em;
     family: $MB;
   }
+  font-size: 0.8em;
+  text-align: center;
   text-transform: uppercase;
   color: darken($white, 50%);
   &:hover{
@@ -93,11 +94,10 @@ body {
 			z-index: 0;
 		}
 		.row{
-			display: table;
 			div{
 				position: relative;
 				z-index: 2;
-				padding: 150px 0;
+				padding: 277px 0;
 				/* height: 600px; */
 				h2,h3{
 					font-family: $MB;
@@ -127,6 +127,7 @@ body {
 				font-size: 1.8em;
 				font-family: $MB;
 				color: $white;
+				text-align: center;
 			}
 		}
 	}
@@ -137,7 +138,33 @@ body {
 	background: $lightgrey;
 	position: relative;
 	.row{
-
+		.projectThumb{
+			/*border: 3px solid $green;*/
+			min-height: 200px;
+			min-width: 200px;
+			display: block;
+			margin: 10px auto;
+		}
+		.thumbDesc{
+			text-align: center;
+			margin: 15px 0 35px 0;
+			p{
+				margin-bottom: 0;
+			}
+			p:first-child{
+				font-family: $MB;
+				font-size: 1.2em;
+				color: darken($white, 30%);
+				text-transform: uppercase;
+				letter-spacing: 2px;
+			}
+			p:last-child{
+				font-family: $AS;
+				font-size: 1em;
+				color: darken($white, 30%);
+				font-style: italic;
+			}
+		}
 	}
 }
 
@@ -176,7 +203,30 @@ body {
 	padding: 100px 0;
 	background: $lightgrey;
 	.row{
-
+		.cvButton{
+			a{
+				width: 100px;
+				height: 100px;
+				background-image: url('../img/favicons/favicon-194x194.png');
+				border: 2px solid $green;
+				&:hover{
+					&:after{
+						display: block;
+						transition: ease-in-out all .5s;
+					}
+				}
+				&:after{
+					content: 'Affichez mon CV';
+					font-family: $AS;
+					font-size: 1em;
+					color: darken($white, 30%);
+					font-style: italic;
+					font-weight: bold;
+					margin-top: 15px;
+					display: none;
+				}
+			}
+		}
 	}
 }
 
@@ -184,7 +234,6 @@ footer{
 	background: $grey;
 	padding: 40px 0;
 	.row{
-		display: table;
 		.contactBar{
 			h4,h5{
 				color: darken($white, 30%);
@@ -204,14 +253,14 @@ footer{
 			}
 		}
 		.communityBar{
-			display: table-cell;
-			vertical-align: middle;
+			margin-top: 45px;
 			.fbLink, 
 			.twitterLink, 
 			.gitLink, 
 			.linkedLink, 
 			.viadeoLink{
 				@include footer-text;
+				margin-left: 10px;
 				&:before{
 					font-family: $PO;
 					margin-right: 5px;
