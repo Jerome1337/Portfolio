@@ -85,8 +85,8 @@ body {
   position: relative; }
   .projects .row .projectThumb {
     /*border: 3px solid $green;*/
-    min-height: 200px;
-    min-width: 200px;
+    min-height: 150px;
+    width: 250px;
     display: block;
     margin: 10px auto; }
   .projects .row .thumbDesc {
@@ -151,17 +151,19 @@ body {
 footer {
   background: #353E42;
   padding: 40px 0; }
-  footer .row .contactBar h4, footer .row .contactBar h5 {
-    color: #b3b3b3; }
-    footer .row .contactBar h4 a, footer .row .contactBar h5 a {
+  footer .row .contactBar {
+    text-align: center; }
+    footer .row .contactBar h4, footer .row .contactBar h5 {
       color: #b3b3b3; }
-      footer .row .contactBar h4 a:hover, footer .row .contactBar h5 a:hover {
-        color: #fff;
-        transition: ease-in-out all .5s; }
-  footer .row .contactBar h4 {
-    font-family: Montserrat, Helvetica, sans-serif; }
-  footer .row .contactBar h5 {
-    font-family: MontserratLight, Helvetica, sans-serif; }
+      footer .row .contactBar h4 a, footer .row .contactBar h5 a {
+        color: #b3b3b3; }
+        footer .row .contactBar h4 a:hover, footer .row .contactBar h5 a:hover {
+          color: #fff;
+          transition: ease-in-out all .5s; }
+    footer .row .contactBar h4 {
+      font-family: Montserrat, Helvetica, sans-serif; }
+    footer .row .contactBar h5 {
+      font-family: MontserratLight, Helvetica, sans-serif; }
   footer .row .communityBar {
     margin-top: 45px; }
     footer .row .communityBar .fbLink, footer .row .communityBar .twitterLink, footer .row .communityBar .gitLink, footer .row .communityBar .linkedLink, footer .row .communityBar .viadeoLink {
