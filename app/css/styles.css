@@ -6,7 +6,7 @@
   font-style: normal;
   font-family: 'MontserratLight';
   src: url('../font/Montserrat-Light.otf') format('opentype');
-  font-weight: normal;
+  font-weight: lighter;
   font-style: normal;
   font-family: 'Montserrat';
   src: url('../font/Montserrat-Bold.otf') format('opentype');
@@ -58,15 +58,15 @@ body {
   .home .homeContent .row div {
     position: relative;
     z-index: 2;
-    padding: 277px 0;
+    padding: 21% 0;
     /* height: 600px; */ }
-    .home .homeContent .row div h2, .home .homeContent .row div h3 {
+    .home .homeContent .row div h1, .home .homeContent .row div h2 {
       font-family: Montserrat, Helvetica, sans-serif;
       color: #fff;
       font-size: 3.5em; }
-    .home .homeContent .row div h2 {
+    .home .homeContent .row div h1 {
       margin-bottom: 25px; }
-    .home .homeContent .row div h3 {
+    .home .homeContent .row div h2 {
       font-size: 2.5em; }
 
 /**** BIO ****/
@@ -111,7 +111,27 @@ body {
 
 /**** MODALS ****/
 .projectModal {
-  background: #3C464A; }
+  background: #3C464A;
+  border: 2px solid #027333;
+  color: #fff; }
+  .projectModal .modalTitle {
+    color: #fff;
+    text-align: center;
+    font-size: 1.8em;
+    font-family: Montserrat, Helvetica, sans-serif;
+    letter-spacing: 5px;
+    margin-bottom: 60px; }
+    .projectModal .modalTitle:after {
+      content: '_';
+      color: #03a64a;
+      font-weight: bold;
+      text-shadow: 0 0 8px #2ecc71;
+      animation: barOpacity 0.8s ease-in-out infinite; }
+  .projectModal .close-reveal-modal {
+    color: #03a64a;
+    transition: all 0.3s ease-in-out; }
+    .projectModal .close-reveal-modal:hover {
+      text-shadow: 0 0 8px #2ecc71; }
 
 /**** SKILLS ****/
 .skillSection {
@@ -142,7 +162,7 @@ body {
   .cv .row .cvButton a {
     width: 100px;
     height: 100px;
-    background-image: url('../img/favicons/favicon-194x194.png');
+    background-image: url('../img/favicons/favicon-194x194.png') no-repeat fixed center;
     border: 2px solid #03a64a; }
     .cv .row .cvButton a:hover:after {
       display: block;
@@ -153,7 +173,6 @@ body {
       font-size: 1em;
       color: #b3b3b3;
       font-style: italic;
-      font-weight: bold;
       margin-top: 15px;
       display: none; }
 
