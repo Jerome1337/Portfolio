@@ -6,8 +6,8 @@
   font-style: normal;
   font-family: 'MontserratLight';
   src: url('../font/Montserrat-Light.otf') format('opentype');
-  font-weight: light;
-  font-style: light;
+  font-weight: normal;
+  font-style: normal;
   font-family: 'Montserrat';
   src: url('../font/Montserrat-Bold.otf') format('opentype');
   font-weight: bold;
@@ -45,6 +45,7 @@ body {
   100% {
     opacity: 0; } }
 
+/**** HOME ****/
 .home {
   background: #3C464A;
   text-align: center;
@@ -68,6 +69,7 @@ body {
     .home .homeContent .row div h3 {
       font-size: 2.5em; }
 
+/**** BIO ****/
 .bio {
   padding: 100px 0;
   background: #353E42;
@@ -79,6 +81,7 @@ body {
     color: #fff;
     text-align: center; }
 
+/**** PROJECTS ****/
 .projects {
   padding: 100px 0;
   background: #3C464A;
@@ -106,6 +109,11 @@ body {
       color: #b3b3b3;
       font-style: italic; }
 
+/**** MODALS ****/
+.projectModal {
+  background: #3C464A; }
+
+/**** SKILLS ****/
 .skillSection {
   padding: 100px 0;
   background: #353E42;
@@ -127,6 +135,7 @@ body {
           margin-bottom: 0;
           color: #b3b3b3; }
 
+/**** CV ****/
 .cv {
   padding: 100px 0;
   background: #3C464A; }
@@ -148,6 +157,7 @@ body {
       margin-top: 15px;
       display: none; }
 
+/**** FOOTER ****/
 footer {
   background: #353E42;
   padding: 40px 0; }

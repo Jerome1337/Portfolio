@@ -12,6 +12,8 @@ var appTemp = './.tmp';
  * Add Gulp and tools
  */
 var gulp = require('gulp');
+var gutil = require('gulp-util');
+var ftp = require('gulp-ftp');
 var $ = require('gulp-load-plugins')();
 var del = require('del');
 var runSequence = require('run-sequence');
@@ -130,6 +132,22 @@ gulp.task('clean', del.bind(null, [
     appTemp,
     appBuild
 ]));
+
+
+/*
+ * Upload FTP
+ */
+ gulp.task('ftp', function () {
+    return gulp.src('./app/**/*')
+        .pipe(ftp({
+            host: 'ftp..com',
+            user: '',
+            pass: '',
+            port: '21',
+            remotePath: '/www/dev/'
+        }))
+        .pipe(gutil.noop());
+});
 
 /*
  * Watch and reload
