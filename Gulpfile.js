@@ -26,7 +26,11 @@ var cmq = require('gulp-combine-media-queries');
  * Scripts
  */
 gulp.task('script', function() {
-    return gulp.src( appSrc + '/js/**/*.js' )
+    return gulp.src([
+        appSrc + '/js/modernizr.js',
+        appSrc + '/js/jquery-2.1.3.js',
+        appSrc + '/js/foundation.min.js',
+        appSrc + '/js/script.js'])
         .pipe(reload({
             stream: true,
             once: true
