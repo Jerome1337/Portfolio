@@ -38,7 +38,6 @@ gulp.task('script', function() {
         .pipe(gulp.dest( appBuild + '/js/' ))
         .pipe($.concat('script.js'))
         .pipe(gulp.dest( appTemp + '/js/' ))
-        .pipe(gulp.dest( appBuild + '/js/' ))
         .pipe($.uglify())
         .pipe($.rename('script.min.js'))
         .pipe(gulp.dest( appTemp + '/js/' ))
