@@ -35,10 +35,10 @@ $green: #03a64a;
 $lightgreen: #2ecc71;
 $white: #fff;
 
-$PO: portfolio;
-$ML: MontserratLight, Helvetica, sans-serif;
-$MB: Montserrat, Helvetica, sans-serif;
-$AS: ashbury, serif;
+$PO: "portfolio", serif;
+$ML: "MontserratLight", "Helvetica", sans-serif;
+$MB: "Montserrat", "Helvetica", sans-serif;
+$AS: "ashbury", "Time", serif;
 
 @mixin footer-text {
   font: {
@@ -144,9 +144,15 @@ body {
 		.projectThumb{
 			/*border: 3px solid $green;*/
 			min-height: 150px;
+			/* height: 150px; */
 			width: 250px;
 			display: block;
 			margin: 10px auto;
+			filter: grayscale(100%);
+			transition: all .3s ease-in-out;
+			&:hover{
+				filter: grayscale(0%);
+			}
 		}
 		.thumbDesc{
 			text-align: center;
@@ -174,15 +180,14 @@ body {
 /**** MODALS ****/
 .projectModal {
 	background: $lightgrey;
-	border: 2px solid $darkgreen;
+	border: 2px solid darken($grey, 10%);
 	color: $white;
 	.modalTitle{
 		color: $white;
-		text-align: center;
 		font-size: 1.8em;
 		font-family: $MB;
-		letter-spacing: 5px;
-		margin-bottom: 60px;
+		letter-spacing: 3px;
+		margin-bottom: 20px;
 		&:after{
 			content: '_';
 			color: $green;
@@ -191,12 +196,31 @@ body {
 		    animation: barOpacity 0.8s ease-in-out infinite;
 		}
 	}
+	.row{
+		p{
+			text-align: center;
+			margin-top: 15px;
+		}
+	}
+	.tagList{
+		list-style: none;
+		text-align: center;
+		text-transform: uppercase;
+		li{
+			background: $grey;
+			color: $lightgrey;
+			border: 1px solid darken($grey, 5%);
+		}
+	}
+	.button{
+		background: $green;
+		transition: all .4s ease-in-out;
+		&:hover{
+			background: darken($green, 5%);
+		}
+	}
 	.close-reveal-modal{
 		color: $green;
-		transition: all 0.3s ease-in-out;
-		&:hover{
-			text-shadow: 0 0 8px $lightgreen;
-		}
 	}
 }
 
@@ -277,12 +301,13 @@ footer{
 					color: darken($white, 30%);
 					&:hover{
 						color: $white;
-						transition: ease-in-out all .5s;
+						transition: all .3s ease-in-out;
 					}
 				}
 			}
 			h4{
 				font-family: $MB;
+				text-transform: uppercase;
 			}
 			h5{
 				font-family: $ML;

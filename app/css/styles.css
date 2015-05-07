@@ -25,7 +25,7 @@ body {
   color: #fff;
   text-align: center;
   font-size: 1.8em;
-  font-family: Montserrat, Helvetica, sans-serif;
+  font-family: "Montserrat", "Helvetica", sans-serif;
   letter-spacing: 5px;
   margin-bottom: 60px; }
   .title:after {
@@ -61,7 +61,7 @@ body {
     padding: 21% 0;
     /* height: 600px; */ }
     .home .homeContent .row div h1, .home .homeContent .row div h2 {
-      font-family: Montserrat, Helvetica, sans-serif;
+      font-family: "Montserrat", "Helvetica", sans-serif;
       color: #fff;
       font-size: 3.5em; }
     .home .homeContent .row div h1 {
@@ -77,7 +77,7 @@ body {
   position: relative; }
   .bio .row div h3 {
     font-size: 1.8em;
-    font-family: Montserrat, Helvetica, sans-serif;
+    font-family: "Montserrat", "Helvetica", sans-serif;
     color: #fff;
     text-align: center; }
 
@@ -89,22 +89,27 @@ body {
   .projects .row .projectThumb {
     /*border: 3px solid $green;*/
     min-height: 150px;
+    /* height: 150px; */
     width: 250px;
     display: block;
-    margin: 10px auto; }
+    margin: 10px auto;
+    filter: grayscale(100%);
+    transition: all .3s ease-in-out; }
+    .projects .row .projectThumb:hover {
+      filter: grayscale(0%); }
   .projects .row .thumbDesc {
     text-align: center;
     margin: 15px 0 35px 0; }
     .projects .row .thumbDesc p {
       margin-bottom: 0; }
     .projects .row .thumbDesc p:first-child {
-      font-family: Montserrat, Helvetica, sans-serif;
+      font-family: "Montserrat", "Helvetica", sans-serif;
       font-size: 1.2em;
       color: #b3b3b3;
       text-transform: uppercase;
       letter-spacing: 2px; }
     .projects .row .thumbDesc p:last-child {
-      font-family: ashbury, serif;
+      font-family: "ashbury", "Time", serif;
       font-size: 1em;
       color: #b3b3b3;
       font-style: italic; }
@@ -112,26 +117,38 @@ body {
 /**** MODALS ****/
 .projectModal {
   background: #3C464A;
-  border: 2px solid #027333;
+  border: 2px solid #1e2326;
   color: #fff; }
   .projectModal .modalTitle {
     color: #fff;
-    text-align: center;
     font-size: 1.8em;
-    font-family: Montserrat, Helvetica, sans-serif;
-    letter-spacing: 5px;
-    margin-bottom: 60px; }
+    font-family: "Montserrat", "Helvetica", sans-serif;
+    letter-spacing: 3px;
+    margin-bottom: 20px; }
     .projectModal .modalTitle:after {
       content: '_';
       color: #03a64a;
       font-weight: bold;
       text-shadow: 0 0 8px #2ecc71;
       animation: barOpacity 0.8s ease-in-out infinite; }
+  .projectModal .row p {
+    text-align: center;
+    margin-top: 15px; }
+  .projectModal .tagList {
+    list-style: none;
+    text-align: center;
+    text-transform: uppercase; }
+    .projectModal .tagList li {
+      background: #353E42;
+      color: #3C464A;
+      border: 1px solid #2a3134; }
+  .projectModal .button {
+    background: #03a64a;
+    transition: all .4s ease-in-out; }
+    .projectModal .button:hover {
+      background: #038d3f; }
   .projectModal .close-reveal-modal {
-    color: #03a64a;
-    transition: all 0.3s ease-in-out; }
-    .projectModal .close-reveal-modal:hover {
-      text-shadow: 0 0 8px #2ecc71; }
+    color: #03a64a; }
 
 /**** SKILLS ****/
 .skillSection {
@@ -142,12 +159,12 @@ body {
     vertical-align: middle; }
     .skillSection .row div h3 {
       font-size: 1.8em;
-      font-family: Montserrat, Helvetica, sans-serif;
+      font-family: "Montserrat", "Helvetica", sans-serif;
       color: #fff; }
     .skillSection .row .skills ul {
       list-style: none;
       text-align: center;
-      font-family: ashbury, serif; }
+      font-family: "ashbury", "Time", serif; }
       .skillSection .row .skills ul li {
         padding: 5px 0;
         margin-bottom: 0; }
@@ -169,7 +186,7 @@ body {
       transition: ease-in-out all .5s; }
     .cv .row .cvButton a:after {
       content: 'Affichez mon CV';
-      font-family: ashbury, serif;
+      font-family: "ashbury", "Time", serif;
       font-size: 1em;
       color: #b3b3b3;
       font-style: italic;
@@ -188,15 +205,16 @@ footer {
         color: #b3b3b3; }
         footer .row .contactBar h4 a:hover, footer .row .contactBar h5 a:hover {
           color: #fff;
-          transition: ease-in-out all .5s; }
+          transition: all .3s ease-in-out; }
     footer .row .contactBar h4 {
-      font-family: Montserrat, Helvetica, sans-serif; }
+      font-family: "Montserrat", "Helvetica", sans-serif;
+      text-transform: uppercase; }
     footer .row .contactBar h5 {
-      font-family: MontserratLight, Helvetica, sans-serif; }
+      font-family: "MontserratLight", "Helvetica", sans-serif; }
   footer .row .communityBar {
     margin-top: 45px; }
     footer .row .communityBar .fbLink, footer .row .communityBar .twitterLink, footer .row .communityBar .gitLink, footer .row .communityBar .linkedLink, footer .row .communityBar .viadeoLink {
-      font-family: Montserrat, Helvetica, sans-serif;
+      font-family: "Montserrat", "Helvetica", sans-serif;
       font-size: 0.8em;
       text-align: center;
       text-transform: uppercase;
@@ -206,7 +224,7 @@ footer {
         color: #fff;
         transition: ease-in-out all .5s; }
       footer .row .communityBar .fbLink:before, footer .row .communityBar .twitterLink:before, footer .row .communityBar .gitLink:before, footer .row .communityBar .linkedLink:before, footer .row .communityBar .viadeoLink:before {
-        font-family: portfolio;
+        font-family: "portfolio", serif;
         margin-right: 5px; }
     footer .row .communityBar .fbLink:before {
       content: '\e000'; }
