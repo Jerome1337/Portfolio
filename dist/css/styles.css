@@ -3,15 +3,21 @@
   src: url("../font/portfolio.eot");
   src: url("../font/portfolio.eot?#iefix") format("embedded-opentype"), url("../font/portfolio.woff") format("woff"), url("../font/portfolio.ttf") format("truetype"), url("../font/portfolio.svg#portfolio") format("svg");
   font-weight: normal;
-  font-style: normal;
+  font-style: normal; }
+
+@font-face {
   font-family: 'MontserratLight';
   src: url('../font/Montserrat-Light.otf') format('opentype');
   font-weight: lighter;
-  font-style: normal;
+  font-style: normal; }
+
+@font-face {
   font-family: 'Montserrat';
   src: url('../font/Montserrat-Bold.otf') format('opentype');
   font-weight: bold;
-  font-style: bold;
+  font-style: bold; }
+
+@font-face {
   font-family: 'ashbury';
   src: url('../font/AshburyLig-webfont.eot');
   src: url('../font/AshburyLig-webfont.eot?#iefix') format('embedded-opentype'), url('../font/AshburyLig-webfont.woff2') format('woff2'), url('../font/AshburyLig-webfont.woff') format('woff'), url('../font/AshburyLig-webfont.ttf') format('truetype'), url('../font/AshburyLig-webfont.svg#ashburylight') format('svg');
@@ -77,9 +83,16 @@ body {
   position: relative; }
   .bio .row div h3 {
     font-size: 1.8em;
-    font-family: "Montserrat", "Helvetica", sans-serif;
+    font-family: "MontserratLight", "Helvetica", sans-serif;
     color: #fff;
     text-align: center; }
+  .bio .row div p {
+    font-size: 1.2em;
+    font-family: "ashbury", "Time", serif;
+    color: #cccccc;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 5px; }
 
 /**** PROJECTS ****/
 .projects {
@@ -103,7 +116,7 @@ body {
     .projects .row .thumbDesc p {
       margin-bottom: 0; }
     .projects .row .thumbDesc p:first-child {
-      font-family: "Montserrat", "Helvetica", sans-serif;
+      font-family: "MontserratLight", "Helvetica", sans-serif;
       font-size: 1.2em;
       color: #b3b3b3;
       text-transform: uppercase;
@@ -208,11 +221,13 @@ footer {
           transition: all .3s ease-in-out; }
     footer .row .contactBar h4 {
       font-family: "Montserrat", "Helvetica", sans-serif;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      letter-spacing: 2px; }
     footer .row .contactBar h5 {
       font-family: "MontserratLight", "Helvetica", sans-serif; }
   footer .row .communityBar {
-    margin-top: 45px; }
+    margin-top: 40px;
+    text-align: center; }
     footer .row .communityBar .fbLink, footer .row .communityBar .twitterLink, footer .row .communityBar .gitLink, footer .row .communityBar .linkedLink, footer .row .communityBar .viadeoLink {
       font-family: "Montserrat", "Helvetica", sans-serif;
       font-size: 0.8em;
@@ -225,7 +240,8 @@ footer {
         transition: ease-in-out all .5s; }
       footer .row .communityBar .fbLink:before, footer .row .communityBar .twitterLink:before, footer .row .communityBar .gitLink:before, footer .row .communityBar .linkedLink:before, footer .row .communityBar .viadeoLink:before {
         font-family: "portfolio", serif;
-        margin-right: 5px; }
+        margin-right: 5px;
+        font-size: 1.5em; }
     footer .row .communityBar .fbLink:before {
       content: '\e000'; }
     footer .row .communityBar .twitterLink:before {
