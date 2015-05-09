@@ -60,7 +60,7 @@ $AS: "ashbury", "Time", serif;
   }
 }
 
-
+/**** COMMON ****/
 body {
 	background: $grey;
 }
@@ -126,7 +126,7 @@ body {
 /**** BIO ****/
 .bio{
 	padding: 100px 0;
-	background: $grey;
+	background: $grayscale;
 	color: $white;
 	position: relative;
 	.row{
@@ -229,6 +229,8 @@ body {
 	.button{
 		background: $green;
 		transition: all .4s ease-in-out;
+		margin-left: auto;
+		margin-right: auto;
 		&:hover{
 			background: darken($green, 5%);
 		}
@@ -277,25 +279,33 @@ body {
 	.row{
 		.cvButton{
 			a{
-				width: 100px;
-				height: 100px;
-				background-image: url('../img/favicons/favicon-194x194.png') no-repeat fixed center;
-				border: 2px solid $green;
-				&:hover{
-					&:after{
-						display: block;
-						transition: ease-in-out all .5s;
+				.cvThumb{
+					/*border: 3px solid $green;*/
+					min-height: 150px;
+					/* height: 150px; */
+					width: 250px;
+					margin: 10px auto;
+					filter: grayscale(100%);
+					transition: all .3s ease-in-out;
+					&:hover{
+						filter: grayscale(0%);
 					}
 				}
-				&:after{
-					content: 'Affichez mon CV';
-					font-family: $AS;
-					font-size: 1em;
-					color: darken($white, 30%);
-					font-style: italic;
-					margin-top: 15px;
-					display: none;
+				// border: 2px solid $green;
+				&:hover{
+					// &:after{
+					// 	display: block;
+					// 	transition: ease-in-out all .5s;
+					// }
 				}
+			}
+			.cvDesc{
+				font-family: $AS;
+				font-size: 1em;
+				color: darken($white, 30%);
+				font-style: italic;
+				margin-top: 15px;
+				text-align: center;
 			}
 		}
 	}

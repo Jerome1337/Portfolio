@@ -24,6 +24,7 @@
   font-weight: normal;
   font-style: normal; }
 
+/**** COMMON ****/
 body {
   background: #353E42; }
 
@@ -157,7 +158,9 @@ body {
       border: 1px solid #2a3134; }
   .projectModal .button {
     background: #03a64a;
-    transition: all .4s ease-in-out; }
+    transition: all .4s ease-in-out;
+    margin-left: auto;
+    margin-right: auto; }
     .projectModal .button:hover {
       background: #038d3f; }
   .projectModal .close-reveal-modal {
@@ -189,22 +192,23 @@ body {
 .cv {
   padding: 100px 0;
   background: #3C464A; }
-  .cv .row .cvButton a {
-    width: 100px;
-    height: 100px;
-    background-image: url('../img/favicons/favicon-194x194.png') no-repeat fixed center;
-    border: 2px solid #03a64a; }
-    .cv .row .cvButton a:hover:after {
-      display: block;
-      transition: ease-in-out all .5s; }
-    .cv .row .cvButton a:after {
-      content: 'Affichez mon CV';
-      font-family: "ashbury", "Time", serif;
-      font-size: 1em;
-      color: #b3b3b3;
-      font-style: italic;
-      margin-top: 15px;
-      display: none; }
+  .cv .row .cvButton a .cvThumb {
+    /*border: 3px solid $green;*/
+    min-height: 150px;
+    /* height: 150px; */
+    width: 250px;
+    margin: 10px auto;
+    filter: grayscale(100%);
+    transition: all .3s ease-in-out; }
+    .cv .row .cvButton a .cvThumb:hover {
+      filter: grayscale(0%); }
+  .cv .row .cvButton .cvDesc {
+    font-family: "ashbury", "Time", serif;
+    font-size: 1em;
+    color: #b3b3b3;
+    font-style: italic;
+    margin-top: 15px;
+    text-align: center; }
 
 /**** FOOTER ****/
 footer {
