@@ -1372,32 +1372,22 @@ $(document).ready(function(){
     animloop();
 
     function handleMouseDown(e){
-          mouseX=parseInt(e.clientX-offsetX);
-          mouseY=parseInt(e.clientY-offsetY);
+        mouseX=parseInt(e.clientX-offsetX);
+        mouseY=parseInt(e.clientY-offsetY);
 
-            Particle.draw = function() {
-            ctx.fillStyle = "rgb(46,204,113)";
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-            
-            ctx.fill();
-            }
+        Particle.draw = function() {
+        ctx.fillStyle = "rgb(46,204,113)";
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+
+        ctx.fill();
         }
+    }
 
-    $("#particules").mousedown(function(e){
-        handleMouseDown(e);
-    });
+    nom = 'p-jerome';
+    domaine = 'hotmail.fr';
 
-    // $('a[href^="#"]').on('click',function (e) {
-    //     e.preventDefault();
+    $('#mailAddr').append('<a href=\"mailto:' + nom + '@' + domaine + '\">' + nom + '@' + domaine + '</a>');
 
-    //     var target = this.hash;
-    //     var $target = $(target);
-
-    //     $('html, body').stop().animate({
-    //         'scrollTop': $target.offset().top
-    //     }, 900, 'swing', function () {
-    //         window.location.hash = target;
-    //     });
-    // });
+    $('#telNumb').append('<a href=\"tel:+33650010894\">06.50.01.08.94</a>');
 });

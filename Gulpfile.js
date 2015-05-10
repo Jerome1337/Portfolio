@@ -162,7 +162,7 @@ gulp.task('serve', ['styles'], function() {
         // Note: this uses an unsigned certificate which on first access
         //       will present a certificate warning in the browser.
         // https: true,
-        proxy: "http://portfolio:8888/"
+        proxy: "http://127.0.0.1/Portfolio/app/"
         //server: [ appTemp, appSrc]
     });
     gulp.watch( appSrc + '/**/*.php', reload);
