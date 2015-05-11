@@ -7,20 +7,20 @@
 
 @font-face {
   font-family: 'MontserratLight';
-  src: url('../font/Montserrat-Light.otf') format('opentype');
+  src: url("../font/Montserrat-Light.otf") format("opentype");
   font-weight: lighter;
   font-style: normal; }
 
 @font-face {
   font-family: 'Montserrat';
-  src: url('../font/Montserrat-Bold.otf') format('opentype');
+  src: url("../font/Montserrat-Bold.otf") format("opentype");
   font-weight: bold;
   font-style: bold; }
 
 @font-face {
   font-family: 'ashbury';
-  src: url('../font/AshburyLig-webfont.eot');
-  src: url('../font/AshburyLig-webfont.eot?#iefix') format('embedded-opentype'), url('../font/AshburyLig-webfont.woff2') format('woff2'), url('../font/AshburyLig-webfont.woff') format('woff'), url('../font/AshburyLig-webfont.ttf') format('truetype'), url('../font/AshburyLig-webfont.svg#ashburylight') format('svg');
+  src: url("../font/AshburyLig-webfont.eot");
+  src: url("../font/AshburyLig-webfont.eot?#iefix") format("embedded-opentype"), url("../font/AshburyLig-webfont.woff2") format("woff2"), url("../font/AshburyLig-webfont.woff") format("woff"), url("../font/AshburyLig-webfont.ttf") format("truetype"), url("../font/AshburyLig-webfont.svg#ashburylight") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -40,15 +40,22 @@ body {
     color: #03a64a;
     font-weight: bold;
     text-shadow: 0 0 8px #2ecc71;
-    animation: barOpacity 0.8s ease-in-out infinite; }
+    -webkit-animation: barOpacity 0.8s ease-in-out infinite;
+            animation: barOpacity 0.8s ease-in-out infinite; }
+
+@-webkit-keyframes barOpacity {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
 
 @keyframes barOpacity {
   0% {
     opacity: 0; }
-
   50% {
     opacity: 1; }
-
   100% {
     opacity: 0; } }
 
@@ -107,10 +114,13 @@ body {
     width: 250px;
     display: block;
     margin: 10px auto;
-    filter: grayscale(100%);
-    transition: all .3s ease-in-out; }
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+    -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out; }
     .projects .row .projectThumb:hover {
-      filter: grayscale(0%); }
+      -webkit-filter: grayscale(0%);
+              filter: grayscale(0%); }
   .projects .row .thumbDesc {
     text-align: center;
     margin: 15px 0 35px 0; }
@@ -144,7 +154,8 @@ body {
       color: #03a64a;
       font-weight: bold;
       text-shadow: 0 0 8px #2ecc71;
-      animation: barOpacity 0.8s ease-in-out infinite; }
+      -webkit-animation: barOpacity 0.8s ease-in-out infinite;
+              animation: barOpacity 0.8s ease-in-out infinite; }
   .projectModal .row p {
     text-align: center;
     margin-top: 15px; }
@@ -158,7 +169,8 @@ body {
       border: 1px solid #2a3134; }
   .projectModal .button {
     background: #03a64a;
-    transition: all .4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+            transition: all 0.4s ease-in-out;
     margin-left: auto;
     margin-right: auto; }
     .projectModal .button:hover {
@@ -198,10 +210,13 @@ body {
     /* height: 150px; */
     width: 250px;
     margin: 10px auto;
-    filter: grayscale(100%);
-    transition: all .3s ease-in-out; }
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+    -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out; }
     .cv .row .cvButton a .cvThumb:hover {
-      filter: grayscale(0%); }
+      -webkit-filter: grayscale(0%);
+              filter: grayscale(0%); }
   .cv .row .cvButton .cvDesc {
     font-family: "ashbury", "Time", serif;
     font-size: 1em;
@@ -222,7 +237,8 @@ footer {
         color: #b3b3b3; }
         footer .row .contactBar h4 a:hover, footer .row .contactBar h5 a:hover {
           color: #fff;
-          transition: all .3s ease-in-out; }
+          -webkit-transition: all 0.3s ease-in-out;
+                  transition: all 0.3s ease-in-out; }
     footer .row .contactBar h4 {
       font-family: "Montserrat", "Helvetica", sans-serif;
       text-transform: uppercase;
@@ -232,17 +248,30 @@ footer {
   footer .row .communityBar {
     margin-top: 40px;
     text-align: center; }
-    footer .row .communityBar .fbLink, footer .row .communityBar .twitterLink, footer .row .communityBar .gitLink, footer .row .communityBar .linkedLink, footer .row .communityBar .viadeoLink {
+    footer .row .communityBar .fbLink,
+    footer .row .communityBar .twitterLink,
+    footer .row .communityBar .gitLink,
+    footer .row .communityBar .linkedLink,
+    footer .row .communityBar .viadeoLink {
       font-family: "Montserrat", "Helvetica", sans-serif;
       font-size: 0.8em;
       text-align: center;
       text-transform: uppercase;
       color: gray;
       margin-left: 10px; }
-      footer .row .communityBar .fbLink:hover, footer .row .communityBar .twitterLink:hover, footer .row .communityBar .gitLink:hover, footer .row .communityBar .linkedLink:hover, footer .row .communityBar .viadeoLink:hover {
+      footer .row .communityBar .fbLink:hover,
+      footer .row .communityBar .twitterLink:hover,
+      footer .row .communityBar .gitLink:hover,
+      footer .row .communityBar .linkedLink:hover,
+      footer .row .communityBar .viadeoLink:hover {
         color: #fff;
-        transition: ease-in-out all .5s; }
-      footer .row .communityBar .fbLink:before, footer .row .communityBar .twitterLink:before, footer .row .communityBar .gitLink:before, footer .row .communityBar .linkedLink:before, footer .row .communityBar .viadeoLink:before {
+        -webkit-transition: ease-in-out all 0.5s;
+                transition: ease-in-out all 0.5s; }
+      footer .row .communityBar .fbLink:before,
+      footer .row .communityBar .twitterLink:before,
+      footer .row .communityBar .gitLink:before,
+      footer .row .communityBar .linkedLink:before,
+      footer .row .communityBar .viadeoLink:before {
         font-family: "portfolio", serif;
         margin-right: 5px;
         font-size: 1.5em; }
