@@ -10794,8 +10794,10 @@ th.hide-for-touch {
 
 /**** COMMON ****/
 
+html,
 body {
   background: #353E42;
+  height: 100%;
 }
 
 .title {
@@ -10849,7 +10851,11 @@ body {
 .home {
   background: #3C464A;
   text-align: center;
-  min-height: 95%;
+  height: 95%;
+}
+
+.home .homeContent {
+  height: 100%;
 }
 
 .home .homeContent #particules {
@@ -10859,25 +10865,36 @@ body {
   z-index: 0;
 }
 
-.home .homeContent .row div {
-  position: relative;
-  z-index: 2;
-  padding: 21% 0;
-  /* height: 600px; */
+.home .homeContent .row {
+  height: 100%;
 }
 
-.home .homeContent .row div h1,
-.home .homeContent .row div h2 {
+.home .homeContent .row .homeContainer {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: table;
+  /* padding: 21% 0; */
+}
+
+.home .homeContent .row .homeContainer div {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.home .homeContent .row .homeContainer div h1,
+.home .homeContent .row .homeContainer div h2 {
   font-family: "Montserrat", "Helvetica", sans-serif;
   color: #fff;
   font-size: 3.5em;
+  text-align: center;
 }
 
-.home .homeContent .row div h1 {
+.home .homeContent .row .homeContainer div h1 {
   margin-bottom: 25px;
 }
 
-.home .homeContent .row div h2 {
+.home .homeContent .row .homeContainer div h2 {
   font-size: 2.5em;
 }
 
@@ -10915,10 +10932,7 @@ body {
 }
 
 .projects .row .projectThumb {
-  /*border: 3px solid $green;*/
-  min-height: 150px;
-  /* height: 150px; */
-  width: 250px;
+  max-height: 150px;
   display: block;
   margin: 10px auto;
   -webkit-filter: grayscale(100%);
@@ -11055,30 +11069,47 @@ body {
   background: #3C464A;
 }
 
-.cv .row .cvButton a .cvThumb {
-  /*border: 3px solid $green;*/
-  min-height: 150px;
-  /* height: 150px; */
-  width: 250px;
-  margin: 10px auto;
+.cv .row .cvButton {
+  margin: 0 auto 20px auto;
+  cursor: default;
+}
+
+.cv .row .cvButton .cvThumb {
+  max-height: 150px;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
 }
 
-.cv .row .cvButton a .cvThumb:hover {
+.cv .row .cvButton .cvThumb:hover {
   -webkit-filter: grayscale(0%);
   filter: grayscale(0%);
 }
 
-.cv .row .cvButton .cvDesc {
+.cv .row .cvButton .cvThumb:hover .descLink {
+  color: #fff;
+}
+
+.cv .row .cvDesc {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.cv .row .cvDesc .descLink {
   font-family: "ashbury", "Time", serif;
   font-size: 1em;
   color: #b3b3b3;
   font-style: italic;
-  margin-top: 15px;
-  text-align: center;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.cv .row .cvDesc .descLink:hover {
+  color: #fff;
 }
 
 /**** FOOTER ****/

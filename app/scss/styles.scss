@@ -61,8 +61,9 @@ $AS: "ashbury", "Time", serif;
 }
 
 /**** COMMON ****/
-body {
+html, body {
 	background: $grey;
+	height: 100%;
 }
 
 .title{
@@ -92,8 +93,9 @@ body {
 	background: $lightgrey;
 	// border-top: 2px solid $green;
 	text-align: center;
-	min-height: 95%;
+	height: 95%;
 	.homeContent{
+		height: 100%;
 		#particules{
 			width: 100% !important;
 			height: 95% !important;
@@ -101,22 +103,30 @@ body {
 			z-index: 0;
 		}
 		.row{
-			div{
+			height: 100%;
+			.homeContainer{
 				position: relative;
 				z-index: 2;
-				padding: 21% 0;
-				/* height: 600px; */
-				h1,h2{
-					font-family: $MB;
-					color: $white;
-					font-size: 3.5em;
+				height: 100%;
+				display: table;
+				/* padding: 21% 0; */
+				div{
+					display: table-cell;
+					vertical-align: middle; 
+					h1,h2{
+						font-family: $MB;
+						color: $white;
+						font-size: 3.5em;
+						text-align: center;
 
-				}
-				h1{
-					margin-bottom: 25px;
-				}
-				h2{
-					font-size: 2.5em;
+					}
+					h1{
+						margin-bottom: 25px;
+					}
+					h2{
+						font-size: 2.5em;
+					
+					}
 				}
 			}
 		}
@@ -156,10 +166,7 @@ body {
 	position: relative;
 	.row{
 		.projectThumb{
-			/*border: 3px solid $green;*/
-			min-height: 150px;
-			/* height: 150px; */
-			width: 250px;
+			max-height: 150px;
 			display: block;
 			margin: 10px auto;
 			filter: grayscale(100%);
@@ -278,34 +285,35 @@ body {
 	background: $lightgrey;
 	.row{
 		.cvButton{
-			a{
-				.cvThumb{
-					/*border: 3px solid $green;*/
-					min-height: 150px;
-					/* height: 150px; */
-					width: 250px;
-					margin: 10px auto;
-					filter: grayscale(100%);
-					transition: all .3s ease-in-out;
-					&:hover{
-						filter: grayscale(0%);
+			margin: 0 auto 20px auto;
+			cursor: default;
+			.cvThumb{
+				max-height: 150px;
+				filter: grayscale(100%);
+				transition: all .3s ease-in-out;
+				display: block;
+				margin: 0 auto;
+				cursor: pointer;
+				&:hover{
+					filter: grayscale(0%);
+					.descLink{
+						color: $white;
 					}
 				}
-				// border: 2px solid $green;
-				&:hover{
-					// &:after{
-					// 	display: block;
-					// 	transition: ease-in-out all .5s;
-					// }
-				}
 			}
-			.cvDesc{
-				font-family: $AS;
-				font-size: 1em;
-				color: darken($white, 30%);
-				font-style: italic;
-				margin-top: 15px;
-				text-align: center;
+		}
+		.cvDesc{
+			margin-top: 15px;
+			text-align: center;
+			.descLink{
+			font-family: $AS;
+			font-size: 1em;
+			color: darken($white, 30%);
+			font-style: italic;
+			transition: all .3s ease-in-out;
+				&:hover{
+					color: $white;
+				}
 			}
 		}
 	}
