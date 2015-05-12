@@ -149,13 +149,15 @@ html, body {
 .projectModal {
   background: #3C464A;
   border: 2px solid #1e2326;
-  color: #fff; }
+  color: #fff;
+  min-height: 0; }
   .projectModal .modalTitle {
     color: #fff;
     font-size: 1.8em;
     font-family: "Montserrat", "Helvetica", sans-serif;
     letter-spacing: 3px;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    text-transform: uppercase; }
     .projectModal .modalTitle:after {
       content: '_';
       color: #03a64a;
@@ -163,23 +165,35 @@ html, body {
       text-shadow: 0 0 8px #2ecc71;
       -webkit-animation: barOpacity 0.8s ease-in-out infinite;
               animation: barOpacity 0.8s ease-in-out infinite; }
-  .projectModal .row p {
-    text-align: center;
-    margin-top: 15px; }
+  .projectModal .row div p {
+    font-family: "MontserratLight", "Helvetica", sans-serif;
+    font-size: 0.9em;
+    color: #b3b3b3; }
+    .projectModal .row div p .descTitle {
+      font-family: "Montserrat", "Helvetica", sans-serif;
+      color: #2ecc71; }
+    .projectModal .row div p .strongW {
+      font-family: "Montserrat", "Helvetica", sans-serif; }
   .projectModal .tagList {
     list-style: none;
-    text-align: center;
-    text-transform: uppercase; }
-    .projectModal .tagList li {
+    text-transform: uppercase;
+    margin: 10px 0 25px 0; }
+    .projectModal .tagList .label {
       background: #353E42;
-      color: #3C464A;
-      border: 1px solid #2a3134; }
+      color: #03a64a;
+      border: 1px solid #027333;
+      -webkit-transition: all 0.4s ease-in-out;
+              transition: all 0.4s ease-in-out;
+      font-size: 0.75em; }
+      .projectModal .tagList .label:hover {
+        background: #2a3134;
+        color: #038d3f; }
   .projectModal .button {
     background: #03a64a;
     -webkit-transition: all 0.4s ease-in-out;
             transition: all 0.4s ease-in-out;
-    margin-left: auto;
-    margin-right: auto; }
+    display: block;
+    margin-bottom: 0; }
     .projectModal .button:hover {
       background: #038d3f; }
   .projectModal .close-reveal-modal {

@@ -203,12 +203,14 @@ html, body {
 	background: $lightgrey;
 	border: 2px solid darken($grey, 10%);
 	color: $white;
+	min-height: 0;
 	.modalTitle{
 		color: $white;
 		font-size: 1.8em;
 		font-family: $MB;
 		letter-spacing: 3px;
 		margin-bottom: 20px;
+		text-transform: uppercase;
 		&:after{
 			content: '_';
 			color: $green;
@@ -218,26 +220,42 @@ html, body {
 		}
 	}
 	.row{
-		p{
-			text-align: center;
-			margin-top: 15px;
+		div{
+			p{
+				font-family: $ML;
+				font-size: 0.9em;
+				color: darken($white, 30%);
+				.descTitle{
+					font-family: $MB;
+					color: $lightgreen;
+				}
+				.strongW{
+					font-family: $MB;
+				}
+			}
 		}
 	}
 	.tagList{
 		list-style: none;
-		text-align: center;
 		text-transform: uppercase;
-		li{
+		margin: 10px 0 25px 0;
+		.label{
 			background: $grey;
-			color: $lightgrey;
-			border: 1px solid darken($grey, 5%);
+			color: $green;
+			border: 1px solid $darkgreen;
+			transition: all .4s ease-in-out;
+			font-size: 0.75em;
+			&:hover{
+				background: darken($grey, 5%);
+				color: darken($green, 5%);
+			}
 		}
 	}
 	.button{
 		background: $green;
 		transition: all .4s ease-in-out;
-		margin-left: auto;
-		margin-right: auto;
+		display: block;
+		margin-bottom: 0;
 		&:hover{
 			background: darken($green, 5%);
 		}
