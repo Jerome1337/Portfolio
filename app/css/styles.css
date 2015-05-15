@@ -10762,6 +10762,8 @@ th.hide-for-touch {
     display: table-cell !important;
   }
 }
+/**** SITE STYLE ****/
+
 @font-face {
   font-family: 'portfolio';
   src: url("../font/portfolio.eot");
@@ -10792,12 +10794,23 @@ th.hide-for-touch {
   font-style: normal;
 }
 
+/**** VARIABLES AND MIXINS ****/
+
 /**** COMMON ****/
 
-html,
 body {
   background: #353E42;
   height: 100%;
+}
+
+::-moz-selection {
+  background: #2ecc71;
+  color: #027333;
+}
+
+::selection {
+  background: #2ecc71;
+  color: #027333;
 }
 
 .title {

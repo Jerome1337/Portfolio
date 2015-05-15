@@ -1,3 +1,4 @@
+/**** SITE STYLE ****/
 @font-face {
   font-family: 'portfolio';
   src: url("../font/portfolio.eot");
@@ -24,10 +25,19 @@
   font-weight: normal;
   font-style: normal; }
 
+/**** VARIABLES AND MIXINS ****/
 /**** COMMON ****/
-html, body {
+body {
   background: #353E42;
   height: 100%; }
+
+::-moz-selection {
+  background: #2ecc71;
+  color: #027333; }
+
+::selection {
+  background: #2ecc71;
+  color: #027333; }
 
 .title {
   color: #fff;
