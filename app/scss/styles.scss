@@ -227,6 +227,9 @@ body {
 		}
 	}
 	.row{
+		.modalPicture{
+			margin-bottom: 10px;
+		}
 		div{
 			p{
 				font-family: $ML;
@@ -245,13 +248,14 @@ body {
 	.tagList{
 		list-style: none;
 		text-transform: uppercase;
-		margin: 10px 0 25px 0;
+		margin: 0 0 25px 0;
 		.label{
 			background: $grey;
 			color: $green;
 			border: 1px solid $darkgreen;
 			transition: all .4s ease-in-out;
 			font-size: 0.75em;
+			margin-right: 5px;
 			&:hover{
 				background: darken($grey, 5%);
 				color: darken($green, 5%);

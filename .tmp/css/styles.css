@@ -175,6 +175,8 @@ body {
       text-shadow: 0 0 8px #2ecc71;
       -webkit-animation: barOpacity 0.8s ease-in-out infinite;
               animation: barOpacity 0.8s ease-in-out infinite; }
+  .projectModal .row .modalPicture {
+    margin-bottom: 10px; }
   .projectModal .row div p {
     font-family: "MontserratLight", "Helvetica", sans-serif;
     font-size: 0.9em;
@@ -187,14 +189,15 @@ body {
   .projectModal .tagList {
     list-style: none;
     text-transform: uppercase;
-    margin: 10px 0 25px 0; }
+    margin: 0 0 25px 0; }
     .projectModal .tagList .label {
       background: #353E42;
       color: #03a64a;
       border: 1px solid #027333;
       -webkit-transition: all 0.4s ease-in-out;
               transition: all 0.4s ease-in-out;
-      font-size: 0.75em; }
+      font-size: 0.75em;
+      margin-right: 5px; }
       .projectModal .tagList .label:hover {
         background: #2a3134;
         color: #038d3f; }
