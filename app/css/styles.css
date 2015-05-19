@@ -10952,6 +10952,7 @@ body {
   filter: grayscale(100%);
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .projects .row .projectThumb:hover {
