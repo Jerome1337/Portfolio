@@ -11226,15 +11226,15 @@ footer .row .communityBar .fbLink:before {
 }
 
 footer .row .communityBar .twitterLink:before {
-  content: '\e001';
-}
-
-footer .row .communityBar .gitLink:before {
   content: '\e002';
 }
 
-footer .row .communityBar .linkedLink:before {
+footer .row .communityBar .gitLink:before {
   content: '\e003';
+}
+
+footer .row .communityBar .linkedLink:before {
+  content: '\e001';
 }
 
 footer .row .communityBar .viadeoLink:before {
