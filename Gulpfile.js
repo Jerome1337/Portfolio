@@ -153,7 +153,7 @@ gulp.task('html', function() {
     spare:true,
     comments: false,
     empty: false,
-    loose: false
+    loose: true
   };
  
   return gulp.src( appSrc + '/*.html' )
@@ -194,7 +194,7 @@ gulp.task('serve', ['build'], function() {
         // Note: this uses an unsigned certificate which on first access
         //       will present a certificate warning in the browser.
         // https: true,
-        proxy: "http://portfolio:8888/"        
+        proxy: "http://127.0.0.1/Portfolio/app/"
         //server: [ appTemp, appSrc]
     });
     gulp.watch( appSrc + '/**/*.php', reload);
